@@ -4,10 +4,12 @@ sap.ui.define([
  ], function (Controller,MessageToast) {
     "use strict";
     return Controller.extend("sap.ui.inventory.controller.LogInPanel", {
-       onLogIn : function () {
+       onLogIn : function (oEvent) {
           MessageToast.show("Congratulations!!! You have successfully Logged in...",{
             at: "center top"
           });
+         var oRouter = this.getOwnerComponent().getRouter();
+			oRouter.navTo("home");
        }
     });
  });

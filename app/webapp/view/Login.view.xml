@@ -1,0 +1,18 @@
+<mvc:View 
+    controllerName="sap.ui.inventory.controller.App" 
+    xmlns="sap.m" 
+    xmlns:l="sap.ui.layout" 
+    xmlns:form="sap.ui.layout.form" 
+    xmlns:mvc="sap.ui.core.mvc">
+<Shell>
+    <App class="myLogIn">
+        <pages>
+            <Page title="LOGIN">
+                <content>
+                   <mvc:XMLView viewName="sap.ui.inventory.view.LogInPanel"/>
+                </content>
+            </Page>
+        </pages>
+    </App>
+</Shell>
+</mvc:View>

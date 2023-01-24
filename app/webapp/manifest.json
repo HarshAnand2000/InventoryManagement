@@ -36,6 +36,38 @@
             "compact": true,
             "cozy": true
         },
+        "routing": {
+            "config": {
+              "routerClass": "sap.m.routing.Router",
+              "type": "View",
+              "viewType": "XML",
+              "path": "sap.ui.inventory.view",
+              "controlId": "app",
+              "controlAggregation": "pages"
+            },
+            "routes": [
+              {
+                "pattern": "",
+                "name": "login",
+                "target": "login"
+              },
+              {
+                "pattern": "home",
+                "name": "home",
+                "target": "home"
+              }
+            ],
+            "targets": {
+              "login": {
+                "id": "login",
+                "name": "Login"
+              },
+              "home": {
+                "id": "home",
+                "name": "Home"
+              }
+            }
+          },
         "resources": {
             "css": [
               {
