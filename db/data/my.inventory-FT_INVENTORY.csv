@@ -1,0 +1,4 @@
+prd_id;prd_cat;added_on;added_by;qty;stocks;st_unit;uom;exp_date;batch_no;DT_PRODUCT_prd_id
+101;Detergent;2023-01-20T06:30:12.329Z;Joe;100;1200;pieces;gm;2023-06-20;22222;101
+102;Detergent;2023-01-21T06:30:12.329Z;Jay;100;1200;pieces;gm;2023-06-20;22222;102
+103;Soap;2023-01-22T06:30:12.329Z;John;100;1200;pieces;gm;2023-06-20;22222;103

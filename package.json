@@ -1,0 +1,25 @@
+{
+  "name": "InventoryManagement",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap/cds": "^6",
+    "express": "^4"
+  },
+  "devDependencies": {
+    "@sap/ux-specification": "^1.102.15",
+    "sqlite3": "^5.0.4"
+  },
+  "scripts": {
+    "start": "cds run",
+    "watch-usermaster": "cds watch --open usermaster/webapp/index.html?sap-ui-xx-viewCache=false",
+    "watch-productmaster": "cds watch --open productmaster/webapp/index.html?sap-ui-xx-viewCache=false"
+  },
+  "sapux": [
+    "app/usermaster",
+    "app/productmaster"
+  ]
+}
