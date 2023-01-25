@@ -1,0 +1,94 @@
+<mvc:View controllerName="sap.ui.inventory.controller.Home" xmlns="sap.m" xmlns:form="sap.ui.layout.form" xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc">
+    <App>
+        <Page title="Add Product Master">
+            <HBox justifyContent="SpaceBetween" class="myNav" height="60px">
+                <FlexBox justifyContent="Center" alignItems="Center" width="auto">
+                    <Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Wipro_Primary_Logo_Color_RGB.svg/440px-Wipro_Primary_Logo_Color_RGB.svg.png" width="50px" class="sapUiSmallMargin" />
+                    <FormattedText htmlText="Inventory Management Solution" class="sapUiSmallMargin myCustomText" />
+                </FlexBox>
+                <FlexBox alignItems="Center">
+                    <Button text="Home" width="auto" type="Emphasized" class="sapUiSmallMargin" press=".onHome" />
+                    <Button text="Add Product Inventory" width="auto" type="Emphasized" class="sapUiSmallMargin" press=".onAddProductInventory" />
+                    <Button text="Analytics Dashboard" width="auto" type="Emphasized" class="sapUiSmallMargin" press=".onAnalyticsDashboard" />
+                </FlexBox>
+            </HBox>
+            <form:SimpleForm editable="true">
+
+                <VBox justifyContent="Center" alignItems="Center">
+
+                    <FlexBox width="480px" height="50px" alignItems="Center" justifyContent="SpaceBetween">
+
+                        <Label text="Product ID" width="150px" design="Bold"/>
+
+                        <Input placeholder="Enter Product ID" valueLiveUpdate="true" class="sapThemeBrand-asBackgroundColor" width="400px" />
+
+                    </FlexBox>
+
+                    <FlexBox width="480px" height="50px" alignItems="Center" justifyContent="SpaceBetween">
+
+                        <Label text="Product Category" width="150px" design="Bold" />
+
+                        <Input placeholder="Enter Product Category" valueLiveUpdate="true" class="sapThemeBrand-asBackgroundColor" width="400px" />
+
+                    </FlexBox>
+
+                    <FlexBox width='480px' height="50px" alignItems="Center" justifyContent="SpaceBetween">
+
+                        <Label text="Product Name" width="150px" design="Bold"/>
+
+                        <Input placeholder="Enter Product Name" valueLiveUpdate="true" class="sapThemeBrand-asBackgroundColor" width="400px" />
+
+                    </FlexBox>
+
+                    <FlexBox width='480px' height="50px" alignItems="Center" justifyContent="SpaceBetween">
+
+                        <Label text="Created On" width="150px" design="Bold"/>
+
+                        <Input placeholder="Enter Created On" valueLiveUpdate="true" class="sapThemeBrand-asBackgroundColor" width="400px" />
+
+                    </FlexBox>
+
+                    <FlexBox width='480px' height="50px" alignItems="Center" justifyContent="SpaceBetween">
+
+                        <Label text="Created By" width="150px" design="Bold"/>
+
+                        <Input placeholder="Enter Created By" valueLiveUpdate="true" class="sapThemeBrand-asBackgroundColor" width="400px" />
+
+                    </FlexBox>
+
+                    <FlexBox width='480px' height="50px" alignItems="Center" justifyContent="SpaceBetween">
+
+                        <Label text="Unit of Measure" width="150px" design="Bold"/>
+
+                        <Input placeholder="Enter Unit of Measure" valueLiveUpdate="true" class="sapThemeBrand-asBackgroundColor" width="400px" />
+
+                    </FlexBox>
+
+                    <FlexBox width='480px' height="50px" alignItems="Center" justifyContent="SpaceBetween">
+
+                        <Label text="Active" width="150px" design="Bold"/>
+
+                        <Input placeholder="Enter Status" valueLiveUpdate="true" class="sapThemeBrand-asBackgroundColor" width="400px" />
+
+                    </FlexBox>
+
+                    <FlexBox width='480px' height="50px" alignItems="Center" justifyContent="SpaceBetween">
+
+                        <Label text="Product Type" width="150px" design="Bold"/>
+
+                        <Input placeholder="Enter Product type" valueLiveUpdate="true" class="sapThemeBrand-asBackgroundColor" width="400px" />
+
+                    </FlexBox>
+
+                    <FlexBox height="120px" alignItems="Center" justifyContent="Center">
+
+                        <Button width="150px" type="Emphasized" text="Submit" press=".onSubmit" />
+
+                    </FlexBox>
+
+                </VBox>
+
+            </form:SimpleForm>
+        </Page>
+    </App>
+</mvc:View>

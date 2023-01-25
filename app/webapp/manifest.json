@@ -55,6 +55,21 @@
                 "pattern": "home",
                 "name": "home",
                 "target": "home"
+              },
+              {
+                "pattern": "addproductmaster",
+                "name": "addproductmaster",
+                "target": "addproductmaster"
+              },
+              {
+                "pattern": "addproductinventory",
+                "name": "addproductinventory",
+                "target": "addproductinventory"
+              },
+              {
+                "pattern": "analyticsdashboard",
+                "name": "analyticsdashboard",
+                "target": "analyticsdashboard"
               }
             ],
             "targets": {
@@ -65,6 +80,18 @@
               "home": {
                 "id": "home",
                 "name": "Home"
+              },
+              "addproductmaster": {
+                "id": "addproductmaster",
+                "name": "AddProductMaster"
+              },
+              "addproductinventory": {
+                "id": "addproductinventory",
+                "name": "AddProductInventory"
+              },
+              "analyticsdashboard": {
+                "id": "analyticsdashboard",
+                "name": "AnalyticsDashboard"
               }
             }
           },

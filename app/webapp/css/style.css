@@ -1,4 +1,11 @@
 .myLogIn .myCustomText{
     font-size: 35px;
 }
+.myNav .myCustomText{
+    font-size: 20px;
+    color: white;
+}
+.myNav{
+    background-color:#89CFF0;
+}
 

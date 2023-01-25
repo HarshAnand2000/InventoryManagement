@@ -1,0 +1,119 @@
+<mvc:View controllerName="sap.ui.inventory.controller.Home" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:form="sap.ui.layout.form" xmlns:mvc="sap.ui.core.mvc">
+    <App>
+        <Page title="Add Product Inventory">
+            <HBox justifyContent="SpaceBetween" class="myNav" height="60px">
+                <FlexBox justifyContent="Center" alignItems="Center" width="auto">
+                    <Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Wipro_Primary_Logo_Color_RGB.svg/440px-Wipro_Primary_Logo_Color_RGB.svg.png" width="50px" class="sapUiSmallMargin" />
+                    <FormattedText htmlText="Inventory Management Solution" class="sapUiSmallMargin myCustomText" />
+                </FlexBox>
+                <FlexBox alignItems="Center">
+                    <Button text="Home" width="auto" type="Emphasized" class="sapUiSmallMargin" press=".onHome" />
+                    <Button text="Add Product Master" width="auto" type="Emphasized" class="sapUiSmallMargin" press=".onAddProductMaster" />
+                    <Button text="Analytics Dashboard" width="auto" type="Emphasized" class="sapUiSmallMargin" press=".onAnalyticsDashboard" />
+                </FlexBox>
+            </HBox>
+            
+            <form:SimpleForm editable="true">
+
+                <VBox justifyContent="Center" alignItems="Center">
+
+                    <FlexBox width="480px" height="50px" alignItems="Center" justifyContent="SpaceBetween">
+
+                        <Label text="Product ID" width="150px" design="Bold" />
+
+                        <Input placeholder="Enter Product ID" valueLiveUpdate="true" class="sapThemeBrand-asBackgroundColor" width="400px" />
+
+                    </FlexBox>
+
+                    <FlexBox width="480px" height="50px" alignItems="Center" justifyContent="SpaceBetween">
+
+                        <Label text="Product Category" width="150px" design="Bold" />
+
+                        <Input placeholder="Enter Product Category" valueLiveUpdate="true" width="400px" />
+
+                    </FlexBox>
+
+                    <FlexBox width="480px" height="50px" alignItems="Center" justifyContent="SpaceBetween">
+
+                        <Label text="Product Type" width="150px" design="Bold" />
+
+                        <Input placeholder="Enter Product Type" valueLiveUpdate="true" width="400px" />
+
+                    </FlexBox>
+
+                    <FlexBox width="480px" height="50px" alignItems="Center" justifyContent="SpaceBetween">
+
+                        <Label text="Added on" width="150px" design="Bold" />
+
+                        <Input placeholder="Enter Added On Date" valueLiveUpdate="true" width="400px" />
+
+                    </FlexBox>
+
+                    <FlexBox width="480px" height="50px" alignItems="Center" justifyContent="SpaceBetween">
+
+                        <Label text="Added By" width="150px" design="Bold" />
+
+                        <Input placeholder="Enter Added By" valueLiveUpdate="true" width="400px" />
+
+                    </FlexBox>
+
+                    <FlexBox width="480px" height="50px" alignItems="Center" justifyContent="SpaceBetween">
+
+                        <Label text="Quantity" width="150px" design="Bold" />
+
+                        <Input placeholder="Enter Quantity" valueLiveUpdate="true" width="400px" />
+
+                    </FlexBox>
+
+                    <FlexBox width="480px" height="50px" alignItems="Center" justifyContent="SpaceBetween">
+
+                        <Label text="Unit of measure" width="150px" design="Bold" />
+
+                        <Input placeholder="Enter PUnit of Measure" valueLiveUpdate="true" width="400px" />
+
+                    </FlexBox>
+
+                    <FlexBox width="480px" height="50px" alignItems="Center" justifyContent="SpaceBetween">
+
+                        <Label text="Expiry Date" width="150px" design="Bold" />
+
+                        <Input placeholder="Enter Expiry Date" valueLiveUpdate="true" width="400px" />
+
+                    </FlexBox>
+
+                    <FlexBox width="480px" height="50px" alignItems="Center" justifyContent="SpaceBetween">
+
+                        <Label text="Batch Number" width="150px" design="Bold" />
+
+                        <Input placeholder="Enter Batch Number" valueLiveUpdate="true" width="400px" />
+
+                    </FlexBox>
+
+                    <FlexBox width="480px" height="50px" alignItems="Center" justifyContent="SpaceBetween">
+
+                        <Label text="Stocks" width="150px" design="Bold" />
+
+                        <Input placeholder="Enter Stocks" valueLiveUpdate="true" width="400px" />
+
+                    </FlexBox>
+
+                    <FlexBox width="480px" height="50px" alignItems="Center" justifyContent="SpaceBetween">
+
+                        <Label text="Unit" width="150px" design="Bold" />
+
+                        <Input placeholder="Enter Unit" valueLiveUpdate="true" width="400px" />
+
+                    </FlexBox>
+
+                    <FlexBox height="120px" alignItems="Center" justifyContent="Center">
+
+                        <Button width="150px" type="Emphasized" text="Submit" press=".onSubmit" />
+
+                    </FlexBox>
+
+                </VBox>
+
+            </form:SimpleForm>
+        </Page>
+    </App>
+</mvc:View>

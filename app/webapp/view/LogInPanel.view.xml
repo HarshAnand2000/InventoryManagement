@@ -11,12 +11,12 @@
         <form:SimpleForm editable="true">
             <VBox justifyContent="Center" alignItems="Center">
                 <FlexBox width="480px" height="80px" alignItems="Center" justifyContent="SpaceBetween">
-                    <Label text="Username:" />
-                    <Input placeholder="Enter your username" valueLiveUpdate="true" class="sapThemeBrand-asBackgroundColor" width="400px" />
+                    <Label text="Username:*" design="Bold"/>
+                    <Input id="user_input" placeholder="Enter your username" valueLiveUpdate="true" class="sapThemeBrand-asBackgroundColor" width="400px" />
                 </FlexBox>
                 <FlexBox width="480px" height="80px" alignItems="Center" justifyContent="SpaceBetween">
-                    <Label text="Password:" />
-                    <Input type="Password" placeholder="Enter your password" valueLiveUpdate="true" width="400px" />
+                    <Label text="Password:*" design="Bold"/>
+                    <Input type="Password" id="pass_input" placeholder="Enter your password" valueLiveUpdate="true" width="400px" />
                 </FlexBox>
                 <FlexBox height="120px" alignItems="Center" justifyContent="Center">
                     <Button width="150px" type="Emphasized" text="Log in" press=".onLogIn" />
