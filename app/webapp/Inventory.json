@@ -1,0 +1,46 @@
+{
+    "Inventory": [
+      {
+        "prd_id": "101",
+        "prd_name": "Surf Excel",
+        "prd_cat": "Detergent",
+        "added_on": "2023-01-20T06:30:12.329Z",
+        "added_by": "Joe",
+        "qty": "100",
+        "stocks": "1200",
+        "st_unit": "pieces",
+        "uom": "gm",
+        "exp_date": "2023-06-20",
+        "batch_no": "22222",
+        "DT_PRODUCT_prd_id": "101"
+        },
+        {
+        "prd_id": "102",
+        "prd_cat": "Detergent",
+        "prd_name":"Tide",
+        "added_on": "2023-01-21T06:30:12.329Z",
+        "added_by": "Jay",
+        "qty": "100",
+        "stocks": "1200",
+        "st_unit": "pieces",
+        "uom": "gm",
+        "exp_date": "2023-06-20",
+        "batch_no": "22222",
+        "DT_PRODUCT_prd_id": "102"
+        },
+        {
+        "prd_id": "103",
+        "prd_cat": "Soap",
+        "prd_name":"Lifebouy",
+        "added_on": "2023-01-22T06:30:12.329Z",
+        "added_by": "John",
+        "qty": "100",
+        "stocks": "1200",
+        "st_unit": "pieces",
+        "uom": "gm",
+        "exp_date": "2023-06-20",
+        "batch_no": "22222",
+        "DT_PRODUCT_prd_id": "103"
+        }
+    ]
+  }

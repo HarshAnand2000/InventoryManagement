@@ -8,14 +8,14 @@
             <Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Wipro_Primary_Logo_Color_RGB.svg/440px-Wipro_Primary_Logo_Color_RGB.svg.png" width="150px" />
             <FormattedText htmlText="Inventory Management Solution" class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText" />
         </FlexBox>
-        <form:SimpleForm editable="true">
-            <VBox justifyContent="Center" alignItems="Center">
-                <FlexBox width="480px" height="80px" alignItems="Center" justifyContent="SpaceBetween">
-                    <Label text="Username:*" design="Bold"/>
+        <form:SimpleForm editable="true" width="800px" class="myLoginForm">
+            <VBox justifyContent="Center" alignItems="Center" >
+                <FlexBox width="500px" height="80px" alignItems="Center" justifyContent="SpaceBetween">
+                    <Label text="Username:" design="Bold"/>
                     <Input id="user_input" placeholder="Enter your username" valueLiveUpdate="true" class="sapThemeBrand-asBackgroundColor" width="400px" />
                 </FlexBox>
-                <FlexBox width="480px" height="80px" alignItems="Center" justifyContent="SpaceBetween">
-                    <Label text="Password:*" design="Bold"/>
+                <FlexBox width="500px" height="80px" alignItems="Center" justifyContent="SpaceBetween">
+                    <Label text="Password:" design="Bold"/>
                     <Input type="Password" id="pass_input" placeholder="Enter your password" valueLiveUpdate="true" width="400px" />
                 </FlexBox>
                 <FlexBox height="120px" alignItems="Center" justifyContent="Center">

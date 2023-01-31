@@ -32,6 +32,12 @@
                 "sap.ui.layout":{}
             }
         },
+        "models": {
+          "inventory": {
+		        "type": "sap.ui.model.json.JSONModel",
+		        "uri": "Inventory.json"
+	        }
+        },
         "contentDensities": {
             "compact": true,
             "cozy": true
@@ -70,6 +76,11 @@
                 "pattern": "analyticsdashboard",
                 "name": "analyticsdashboard",
                 "target": "analyticsdashboard"
+              },
+              {
+                "pattern": "viewproductmaster",
+                "name": "viewproductmaster",
+                "target": "viewproductmaster"
               }
             ],
             "targets": {
@@ -92,6 +103,10 @@
               "analyticsdashboard": {
                 "id": "analyticsdashboard",
                 "name": "AnalyticsDashboard"
+              },
+              "viewproductmaster": {
+                "id": "viewproductmaster",
+                "name": "ViewProductMaster"
               }
             }
           },

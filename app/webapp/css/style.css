@@ -1,11 +1,76 @@
 .myLogIn .myCustomText{
     font-size: 35px;
 }
-.myNav .myCustomText{
+.myCustomText{
     font-size: 20px;
     color: white;
 }
 .myNav{
-    background-color:#89CFF0;
+    background-color:#06B0F0;
+}
+.iconSize{
+    font-size: 25px;
+}
+.icontext{
+    color:white;
+}
+.title{
+    background-color: #06B0F0;
+    margin-top: 15px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 15px;
+    height:45px;
+    border: 2px solid #00308F;
 }
 
+.analayticstitle{
+    background-color: #50C878;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height:45px;
+    border: 2px solid #00308F;
+    border-radius: 5px;
+    
+}
+
+button{
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid black;
+    background-color: #06B0F0;
+}
+
+.myNav .btn{
+    border-radius: 5px;
+}
+
+.title .btn{
+   border-style:none;
+   border: 2px solid black;
+   height:40px;
+   border-radius: 5px;
+}
+
+.myLoginForm{
+    border-style: solid;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.inventoryTable th {
+	background:#4472C4;
+}
+.inventoryTable .headColor{
+	color: white;
+    font-weight: bold;
+}
+.inventoryTable tr:nth-child(even){background-color: #e9ebf5;}
+
+.inventoryTable tr:nth-child(odd){ background-color: #d0d6e9;}
+
+.inventoryTable, th, td{
+    border: 1px solid white;
+}

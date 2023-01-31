@@ -2,6 +2,7 @@ sap.ui.define([
     "sap/ui/core/mvc/Controller"
  ], function (Controller) {
     "use strict";
+
     return Controller.extend("sap.ui.inventory.controller.Home", {
        onAddProductMaster : function (oEvent) {
          var oRouter = this.getOwnerComponent().getRouter();
@@ -22,6 +23,10 @@ sap.ui.define([
          var oRouter = this.getOwnerComponent().getRouter();
          //var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			oRouter.navTo("home");
-       }
+       },
+       onViewProductMaster : function (oEvent) {
+         var oRouter = this.getOwnerComponent().getRouter();
+         oRouter.navTo("viewproductmaster");
+       } 
     });
  });

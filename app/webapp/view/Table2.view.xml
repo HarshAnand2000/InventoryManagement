@@ -1,0 +1,16 @@
+<mvc:View
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc">
+    
+	<Table 
+    id="inventoryTable"
+    class="inventoryTable">
+		<columns>
+			<Column id="employeeIDCol"><Text text="Product ID" class="headColor"/></Column>
+			<Column id="lastNameCol" demandPopin="true"><Text text="Product Category" class="headColor"/></Column>
+			<Column id="addressCol" minScreenWidth="Tablet" demandPopin="true"><Text text="Product Type" class="headColor"/></Column>
+			<Column id="uom" minScreenWidth="Tablet" demandPopin="true" ><Text text="UOM" class="headColor"/></Column>
+			<Column id="unit" minScreenWidth="Tablet" demandPopin="true" ><Text text="Active Staus" class="headColor"/></Column>
+		</columns>
+    </Table>
+</mvc:View>

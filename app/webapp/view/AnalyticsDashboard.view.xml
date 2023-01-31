@@ -1,24 +1,26 @@
-<mvc:View
-	controllerName="sap.ui.inventory.controller.Home"
-	xmlns="sap.m"
-	xmlns:l="sap.ui.layout"
-	xmlns:mvc="sap.ui.core.mvc">
-    <App >
-	<Page
-		title="Analytics Dashboard">
-		<HBox justifyContent="SpaceBetween" class="myNav" height="60px">
-            <FlexBox justifyContent="Center" alignItems="Center" width="auto">
-                <Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Wipro_Primary_Logo_Color_RGB.svg/440px-Wipro_Primary_Logo_Color_RGB.svg.png" 
-                       width="50px" 
-                       class="sapUiSmallMargin"/>
-                <FormattedText htmlText="Inventory Management Solution" class="sapUiSmallMargin myCustomText" />
+<mvc:View controllerName="sap.ui.inventory.controller.Home" xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc">
+    <App>
+        <Panel>
+            <HBox justifyContent="SpaceBetween" class="myNav" height="60px">
+                <FlexBox justifyContent="Center" alignItems="Center" width="auto">
+                    <Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Wipro_Primary_Logo_Color_RGB.svg/440px-Wipro_Primary_Logo_Color_RGB.svg.png" width="50px" class="sapUiSmallMargin" />
+                    <FormattedText htmlText="Inventory Management Solution" class="sapUiSmallMargin myCustomText" />
+                </FlexBox>
+                <HBox>
+                    <FlexBox alignItems="Center">
+                        <Button text="Home" width="auto" type="Unstyled" class="sapUiSmallMargin btn" press=".onHome" />
+                        <Button text="Add Product Master" width="auto" type="Unstyled" class="sapUiSmallMargin btn" press=".onAddProductMaster" />
+                        <Button text="Add Product Inventory" width="auto" type="Unstyled" class="sapUiSmallMargin btn" press=".onAddProductInventory" />
+                    </FlexBox>
+                    <VBox alignItems="Center" justifyContent="Center" class="sapUiSmallMargin">
+                        <core:Icon src="sap-icon://person-placeholder" class="iconSize" color="white" />
+                        <Text text="Alice" class="icontext" />
+                    </VBox>
+                </HBox>
+            </HBox>
+            <FlexBox class="analayticstitle" justifyContent="Center" alignItems="Center">
+                <Text text="Analytics Dashboard" class="myCustomText sapUiSmallMargin" />
             </FlexBox>
-            <FlexBox alignItems="Center">
-                <Button text="Home" width="auto" type="Emphasized" class="sapUiSmallMargin" press=".onHome"/>
-                <Button text="Add Product Master" width="auto" type="Emphasized" class="sapUiSmallMargin" press=".onAddProductMaster"/>
-                <Button text="Add Product Inventory" width="auto" type="Emphasized" class="sapUiSmallMargin" press=".onAddProductInventory"/>
-            </FlexBox>
-        </HBox>
-	</Page>
+        </Panel>
     </App>
 </mvc:View>

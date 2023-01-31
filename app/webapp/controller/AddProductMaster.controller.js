@@ -3,6 +3,7 @@ sap.ui.define([
          "use strict"; return Controller.extend("sap.ui.inventory.controller.ProductMaster", {
              onSubmit: function () { 
 
-             } 
+             }
+             
          }); 
     });
