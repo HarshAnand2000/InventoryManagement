@@ -2,15 +2,26 @@
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc">
     
-	<Table 
+	<Table items="{path:'/DT_PRODUCT'}" 
     id="inventoryTable"
     class="inventoryTable">
 		<columns>
-			<Column id="employeeIDCol"><Text text="Product ID" class="headColor"/></Column>
-			<Column id="lastNameCol" demandPopin="true"><Text text="Product Category" class="headColor"/></Column>
-			<Column id="addressCol" minScreenWidth="Tablet" demandPopin="true"><Text text="Product Type" class="headColor"/></Column>
-			<Column id="uom" minScreenWidth="Tablet" demandPopin="true" ><Text text="UOM" class="headColor"/></Column>
-			<Column id="unit" minScreenWidth="Tablet" demandPopin="true" ><Text text="Active Staus" class="headColor"/></Column>
+			<Column><Text text="Product ID" class="headColor"/></Column>
+			<Column demandPopin="true"><Text text="Product Category" class="headColor"/></Column>
+			<Column minScreenWidth="Tablet" demandPopin="true"><Text text="Product Type" class="headColor"/></Column>
+			<Column minScreenWidth="Tablet" demandPopin="true"><Text text="UOM" class="headColor"/></Column>
+            <Column minScreenWidth="Tablet" demandPopin="true"><Text text="Active Status" class="headColor"/></Column>
 		</columns>
-    </Table>
+        <items>
+			<ColumnListItem>
+				<cells>
+					<Text text="{prd_id}"/>
+					<Text text="{prd_cat}"/>
+					<Text text="{prd_type}"/>
+					<Text text="{uom}"/>
+					<Text text="{active}"/>
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
 </mvc:View>

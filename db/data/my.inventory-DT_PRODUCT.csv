@@ -1,4 +1,4 @@
-prd_id;prd_cat;prd_name;created_on;created_by;uom;active
-101;Detergent;Surf Excel;2023-01-20T06:27:12.329Z;Joe;gm;1
-102;Detergent;Tide;2023-01-20T06:27:12.329Z;Jay;gm;1
-103;Soap;Lifebouy;2023-01-20T06:27:12.329Z;John;gm;1
+prd_id;prd_cat;prd_type;created_on;created_by;uom;active
+101;Detergent;NA;2023-01-20T06:27:12.329Z;Joe;gm;1
+102;Soap;NA;2023-01-20T06:27:12.329Z;John;gm;1
+103;Skin Care;NA;2023-01-20T06:27:12.329Z;John;gm;1

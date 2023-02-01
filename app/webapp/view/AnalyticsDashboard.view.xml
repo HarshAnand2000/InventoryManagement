@@ -1,4 +1,4 @@
-<mvc:View controllerName="sap.ui.inventory.controller.Home" xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc">
+<mvc:View controllerName="sap.ui.inventory.controller.AnalyticsDashboard" xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" xmlns:viz="sap.viz.ui5.controls" xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds" xmlns:viz.data="sap.viz.ui5.data">
     <App>
         <Panel>
             <HBox justifyContent="SpaceBetween" class="myNav" height="60px">
@@ -21,6 +21,28 @@
             <FlexBox class="analayticstitle" justifyContent="Center" alignItems="Center">
                 <Text text="Analytics Dashboard" class="myCustomText sapUiSmallMargin" />
             </FlexBox>
+            <viz:VizFrame id="idVizFrame" uiConfig="{applicationSet:'fiori'}"
+                height='100%' width="100%" vizType='bar'>
+                <viz:dataset>
+                    <viz.data:FlattenedDataset data="{/FT_INVENTORY}">
+                        <viz.data:dimensions>
+                            <viz.data:DimensionDefinition name="Category"
+                                value="{prd_cat}" />
+                        </viz.data:dimensions>
+                        <viz.data:measures>
+                            <viz.data:MeasureDefinition name="Stocks"
+                                value="{stocks}" />
+                        </viz.data:measures>
+                    </viz.data:FlattenedDataset>
+                </viz:dataset>
+
+                <viz:feeds>
+                    <viz.feeds:FeedItem id='valueAxisFeed' uid="valueAxis" type="Measure"
+                        values="Category" />
+                    <viz.feeds:FeedItem uid="categoryAxis" type="Dimension"
+                        values="Stocks" />
+                </viz:feeds>
+            </viz:VizFrame>
         </Panel>
     </App>
 </mvc:View>

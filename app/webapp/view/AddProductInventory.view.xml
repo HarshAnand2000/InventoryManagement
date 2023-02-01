@@ -32,67 +32,67 @@
                                     <FlexBox width="480px" height="45px" alignItems="Center" justifyContent="SpaceBetween">
                                         <Label text="Product ID" width="150px" design="Bold" />
 
-                                        <Input placeholder="Enter Product ID" valueLiveUpdate="true" class="sapThemeBrand-asBackgroundColor" width="400px" />
+                                        <Input placeholder="Enter Product ID" valueLiveUpdate="true" class="sapThemeBrand-asBackgroundColor place" width="400px" />
                                     </FlexBox>
 
                                     <FlexBox width="480px" height="45px" alignItems="Center" justifyContent="SpaceBetween">
                                         <Label text="Product Category" width="150px" design="Bold" />
 
-                                        <Input placeholder="Enter Product Category" valueLiveUpdate="true" width="400px" />
+                                        <Input placeholder="Enter Product Category" valueLiveUpdate="true" class="place" width="400px" />
                                     </FlexBox>
 
                                     <FlexBox width="480px" height="45px" alignItems="Center" justifyContent="SpaceBetween">
                                         <Label text="Product Type" width="150px" design="Bold" />
 
-                                        <Input placeholder="Enter Product Type" valueLiveUpdate="true" width="400px" />
+                                        <Input placeholder="Enter Product Type" valueLiveUpdate="true" class="place" width="400px" />
                                     </FlexBox>
 
                                     <FlexBox width="480px" height="45px" alignItems="Center" justifyContent="SpaceBetween">
                                         <Label text="Added on" width="150px" design="Bold" />
 
-                                        <Input placeholder="Enter Added On Date" valueLiveUpdate="true" width="400px" />
+                                        <Input placeholder="Enter Added On Date" valueLiveUpdate="true" class="place" width="400px" />
                                     </FlexBox>
 
                                     <FlexBox width="480px" height="45px" alignItems="Center" justifyContent="SpaceBetween">
                                         <Label text="Added By" width="150px" design="Bold" />
 
-                                        <Input placeholder="Enter Added By" valueLiveUpdate="true" width="400px" />
+                                        <Input placeholder="Enter Added By" valueLiveUpdate="true" class="place" width="400px" />
                                     </FlexBox>
 
                                     <FlexBox width="480px" height="45px" alignItems="Center" justifyContent="SpaceBetween">
                                         <Label text="Quantity" width="150px" design="Bold" />
 
-                                        <Input placeholder="Enter Quantity" valueLiveUpdate="true" width="400px" />
+                                        <Input placeholder="Enter Quantity" valueLiveUpdate="true" class="place" width="400px" />
                                     </FlexBox>
 
                                     <FlexBox width="480px" height="45px" alignItems="Center" justifyContent="SpaceBetween">
                                         <Label text="Unit of measure" width="150px" design="Bold" />
 
-                                        <Input placeholder="Enter Unit of Measure" valueLiveUpdate="true" width="400px" />
+                                        <Input placeholder="Enter Unit of Measure" valueLiveUpdate="true" class="place" width="400px" />
                                     </FlexBox>
 
                                     <FlexBox width="480px" height="45px" alignItems="Center" justifyContent="SpaceBetween">
                                         <Label text="Expiry Date" width="150px" design="Bold" />
 
-                                        <Input placeholder="Enter Expiry Date" valueLiveUpdate="true" width="400px" />
+                                        <Input placeholder="Enter Expiry Date" valueLiveUpdate="true" class="place" width="400px" />
                                     </FlexBox>
 
                                     <FlexBox width="480px" height="45px" alignItems="Center" justifyContent="SpaceBetween">
                                         <Label text="Batch Number" width="150px" design="Bold" />
 
-                                        <Input placeholder="Enter Batch Number" valueLiveUpdate="true" width="400px" />
+                                        <Input placeholder="Enter Batch Number" valueLiveUpdate="true" class="place" width="400px" />
                                     </FlexBox>
 
                                     <FlexBox width="480px" height="45px" alignItems="Center" justifyContent="SpaceBetween">
                                         <Label text="Stocks" width="150px" design="Bold" />
 
-                                        <Input placeholder="Enter Stocks" valueLiveUpdate="true" width="400px" />
+                                        <Input placeholder="Enter Stocks" valueLiveUpdate="true" class="place" width="400px" />
                                     </FlexBox>
 
                                     <FlexBox width="480px" height="45px" alignItems="Center" justifyContent="SpaceBetween">
                                         <Label text="Unit" width="150px" design="Bold" />
 
-                                        <Input placeholder="Enter Unit" valueLiveUpdate="true" width="400px" />
+                                        <Input placeholder="Enter Unit" valueLiveUpdate="true" class="place" width="400px" />
                                     </FlexBox>
 
                                     <FlexBox height="80px" alignItems="Center" justifyContent="Center">

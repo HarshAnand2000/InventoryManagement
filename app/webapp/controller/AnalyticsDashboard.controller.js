@@ -1,9 +1,9 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller"
- ], function (BaseController) {
+ ], function (Controller) {
     "use strict";
 
-    return BaseController.extend("sap.ui.inventory.controller.Home", {
+    return Controller.extend("sap.ui.inventory.controller.Home", {
        onAddProductMaster : function (oEvent) {
          var oRouter = this.getOwnerComponent().getRouter();
          //var oRouter = sap.ui.core.UIComponent.getRouterFor(this);

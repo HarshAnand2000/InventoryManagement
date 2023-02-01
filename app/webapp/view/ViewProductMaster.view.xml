@@ -24,8 +24,11 @@
                                 </HBox>
                             </HBox>
                         </content>
+                        <FlexBox class="title" alignItems="Center" justifyContent="SpaceBetween">
+                            <Text text="Product Master Details" class="myCustomText sapUiSmallMargin" />
+                        </FlexBox>
                         <content>
-                            <mvc:XMLView viewName="sap.ui.inventory.view.Table2" />
+                             <mvc:XMLView viewName="sap.ui.inventory.view.Table2"/>
                         </content>
                     </Panel>
                 </content>

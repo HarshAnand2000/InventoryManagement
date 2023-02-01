@@ -32,49 +32,49 @@
                                 <VBox justifyContent="Center" alignItems="Center" width="auto">
                                     <FlexBox width="480px" height="50px" alignItems="Center" justifyContent="SpaceBetween">
                                         <Label text="Product ID" width="150px" design="Bold" />
-                                        <Input  placeholder="Enter Product ID" valueLiveUpdate="true" class="sapThemeBrand-asBackgroundColor" width="400px" />
+                                        <Input  placeholder="Enter Product ID" valueLiveUpdate="true" class="sapThemeBrand-asBackgroundColor place" width="400px" />
                                     </FlexBox>
 
                                     <FlexBox width="480px" height="50px" alignItems="Center" justifyContent="SpaceBetween">
                                         <Label text="Product Category" width="150px" design="Bold" />
 
-                                        <Input placeholder="Enter Product Category" valueLiveUpdate="true" class="sapThemeBrand-asBackgroundColor" width="400px" />
+                                        <Input placeholder="Enter Product Category" valueLiveUpdate="true" class="sapThemeBrand-asBackgroundColor place" width="400px" />
                                     </FlexBox>
 
                                     <FlexBox width='480px' height="50px" alignItems="Center" justifyContent="SpaceBetween">
                                         <Label text="Product Name" width="150px" design="Bold" />
 
-                                        <Input placeholder="Enter Product Name" valueLiveUpdate="true" class="sapThemeBrand-asBackgroundColor" width="400px" />
+                                        <Input placeholder="Enter Product Name" valueLiveUpdate="true" class="sapThemeBrand-asBackgroundColo place" width="400px" />
                                     </FlexBox>
 
                                     <FlexBox width='480px' height="50px" alignItems="Center" justifyContent="SpaceBetween">
                                         <Label text="Created On" width="150px" design="Bold" />
 
-                                        <Input placeholder="Enter Created On" valueLiveUpdate="true" class="sapThemeBrand-asBackgroundColor" width="400px" />
+                                        <Input placeholder="Enter Created On" valueLiveUpdate="true" class="sapThemeBrand-asBackgroundColor place" width="400px" />
                                     </FlexBox>
 
                                     <FlexBox width='480px' height="50px" alignItems="Center" justifyContent="SpaceBetween">
                                         <Label text="Created By" width="150px" design="Bold" />
 
-                                        <Input placeholder="Enter Created By" valueLiveUpdate="true" class="sapThemeBrand-asBackgroundColor" width="400px" />
+                                        <Input placeholder="Enter Created By" valueLiveUpdate="true" class="sapThemeBrand-asBackgroundColor place" width="400px" />
                                     </FlexBox>
 
                                     <FlexBox width='480px' height="50px" alignItems="Center" justifyContent="SpaceBetween">
                                         <Label text="Unit of Measure" width="150px" design="Bold" />
 
-                                        <Input placeholder="Enter Unit of Measure" valueLiveUpdate="true" class="sapThemeBrand-asBackgroundColor" width="400px" />
+                                        <Input placeholder="Enter Unit of Measure" valueLiveUpdate="true" class="sapThemeBrand-asBackgroundColor place" width="400px" />
                                     </FlexBox>
 
                                     <FlexBox width='480px' height="50px" alignItems="Center" justifyContent="SpaceBetween">
                                         <Label text="Active" width="150px" design="Bold" />
 
-                                        <Input placeholder="Enter Status" valueLiveUpdate="true" class="sapThemeBrand-asBackgroundColor" width="400px" />
+                                        <Input placeholder="Enter Status" valueLiveUpdate="true" class="sapThemeBrand-asBackgroundColor place" width="400px" />
                                     </FlexBox>
 
                                     <FlexBox width='480px' height="50px" alignItems="Center" justifyContent="SpaceBetween">
                                         <Label text="Product Type" width="150px" design="Bold" />
 
-                                        <Input placeholder="Enter Product type" valueLiveUpdate="true" class="sapThemeBrand-asBackgroundColor" width="400px" />
+                                        <Input placeholder="Enter Product type" valueLiveUpdate="true" class="sapThemeBrand-asBackgroundColor place" width="400px" />
                                     </FlexBox>
 
                                     <FlexBox height="120px" alignItems="Center" justifyContent="Center">

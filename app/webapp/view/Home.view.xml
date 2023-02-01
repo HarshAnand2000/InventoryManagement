@@ -1,4 +1,4 @@
-<mvc:View controllerName="sap.ui.inventory.controller.Home" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc">
+<mvc:View controllerName="sap.ui.inventory.controller.Home" xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc">
     <App>
         <pages>
             <Page showHeader="false">
@@ -10,13 +10,20 @@
                                     <Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Wipro_Primary_Logo_Color_RGB.svg/440px-Wipro_Primary_Logo_Color_RGB.svg.png" width="50px" class="sapUiSmallMargin" />
                                     <FormattedText htmlText="Inventory Management Solution" class="sapUiSmallMargin myCustomText" />
                                 </FlexBox>
-                                <FlexBox alignItems="Center">
-                                    <Button text="Add Product Master" width="auto" type="Unstyled" class="sapUiSmallMargin btn" press=".onAddProductMaster" />
-                                    <Button text="Add Product Inventory" width="auto" type="Unstyled" class="sapUiSmallMargin btn" press=".onAddProductInventory" />
-                                    <Button text="Analytics Dashboard" width="auto" type="Unstyled" class="sapUiSmallMargin btn" press=".onAnalyticsDashboard" />
-                                </FlexBox>
+                                <HBox>
+                                    <FlexBox alignItems="Center">
+                                        <Button text="Add Product Master" width="auto" type="Unstyled" class="sapUiSmallMargin btn" press=".onAddProductMaster" />
+                                        <Button text="Add Product Inventory" width="auto" type="Unstyled" class="sapUiSmallMargin btn" press=".onAddProductInventory" />
+                                        <Button text="Analytics Dashboard" width="auto" type="Unstyled" class="sapUiSmallMargin btn" press=".onAnalyticsDashboard" />
+                                    </FlexBox>
+                                    <VBox alignItems="Center" justifyContent="Center" class="sapUiSmallMargin">
+                                        <core:Icon src="sap-icon://person-placeholder" class="iconSize" color="white" />
+                                        <Text text="Alice" class="icontext" />
+                                    </VBox>
+                                </HBox>
                             </HBox>
                         </content>
+                        <MessageStrip text="Congratulations!! You have sucessfully Logged in..." type="Success" showIcon="true" showCloseButton="true" class="sapUiSmallMargin" />
                         <content>
                             <mvc:XMLView viewName="sap.ui.inventory.view.Table" />
                         </content>

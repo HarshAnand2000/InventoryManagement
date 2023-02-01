@@ -1,121 +1,138 @@
 {
-    "_version": "1.12.0",
-    "sap.app": {
-        "id": "sap.ui.inventory",
-        "type": "application",
-        "title": "Inventory",
-        "description": "Inventory Management Solution",
-        "applicationVersion": {
-            "version": "1.0.0"
+  "_version": "1.12.0",
+  "sap.app": {
+    "id": "sap.ui.inventory",
+    "type": "application",
+    "title": "Inventory",
+    "description": "Inventory Management Solution",
+    "applicationVersion": {
+      "version": "1.0.0"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/catalog/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "localUri": "localService/metadata.xml",
+          "odataVersion": "4.0"
         }
-    },
-    "sap.ui": {
-        "technology": "UI5",
-        "deviceTypes":{
-            "desktop": true,
-		    "tablet": true,
-		    "phone": true
-        }   
-    },
-    "sap.ui5" :{
-        "rootView":{
-            "viewName": "sap.ui.inventory.view.App",
-            "type": "XML",
-            "async": true,
-		    "id": "app"
-        },
-        "dependencies": {
-            "minUI5Version": "1.93",
-            "libs": {
-                "sap.ui.core": {},
-		        "sap.m": {},
-                "sap.ui.layout":{}
-            }
-        },
-        "models": {
-          "inventory": {
-		        "type": "sap.ui.model.json.JSONModel",
-		        "uri": "Inventory.json"
-	        }
-        },
-        "contentDensities": {
-            "compact": true,
-            "cozy": true
-        },
-        "routing": {
-            "config": {
-              "routerClass": "sap.m.routing.Router",
-              "type": "View",
-              "viewType": "XML",
-              "path": "sap.ui.inventory.view",
-              "controlId": "app",
-              "controlAggregation": "pages"
-            },
-            "routes": [
-              {
-                "pattern": "",
-                "name": "login",
-                "target": "login"
-              },
-              {
-                "pattern": "home",
-                "name": "home",
-                "target": "home"
-              },
-              {
-                "pattern": "addproductmaster",
-                "name": "addproductmaster",
-                "target": "addproductmaster"
-              },
-              {
-                "pattern": "addproductinventory",
-                "name": "addproductinventory",
-                "target": "addproductinventory"
-              },
-              {
-                "pattern": "analyticsdashboard",
-                "name": "analyticsdashboard",
-                "target": "analyticsdashboard"
-              },
-              {
-                "pattern": "viewproductmaster",
-                "name": "viewproductmaster",
-                "target": "viewproductmaster"
-              }
-            ],
-            "targets": {
-              "login": {
-                "id": "login",
-                "name": "Login"
-              },
-              "home": {
-                "id": "home",
-                "name": "Home"
-              },
-              "addproductmaster": {
-                "id": "addproductmaster",
-                "name": "AddProductMaster"
-              },
-              "addproductinventory": {
-                "id": "addproductinventory",
-                "name": "AddProductInventory"
-              },
-              "analyticsdashboard": {
-                "id": "analyticsdashboard",
-                "name": "AnalyticsDashboard"
-              },
-              "viewproductmaster": {
-                "id": "viewproductmaster",
-                "name": "ViewProductMaster"
-              }
-            }
-          },
-        "resources": {
-            "css": [
-              {
-                "uri": "css/style.css"
-              }
-            ]
-          }
+      }
     }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "rootView": {
+      "viewName": "sap.ui.inventory.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "app"
+    },
+    "dependencies": {
+      "minUI5Version": "1.93",
+      "libs": {
+        "sap.ui.core": {},
+        "sap.m": {},
+        "sap.ui.layout": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {
+          "synchronizationMode": "None",
+          "operationMode": "Server",
+          "autoExpandSelect": true,
+          "earlyRequests": true
+        }
+      }
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "type": "View",
+        "viewType": "XML",
+        "path": "sap.ui.inventory.view",
+        "controlId": "app",
+        "controlAggregation": "pages"
+      },
+      "routes": [
+        {
+          "pattern": "",
+          "name": "login",
+          "target": "login"
+        },
+        {
+          "pattern": "home",
+          "name": "home",
+          "target": "home"
+        },
+        {
+          "pattern": "addproductmaster",
+          "name": "addproductmaster",
+          "target": "addproductmaster"
+        },
+        {
+          "pattern": "addproductinventory",
+          "name": "addproductinventory",
+          "target": "addproductinventory"
+        },
+        {
+          "pattern": "analyticsdashboard",
+          "name": "analyticsdashboard",
+          "target": "analyticsdashboard"
+        },
+        {
+          "pattern": "viewproductmaster",
+          "name": "viewproductmaster",
+          "target": "viewproductmaster"
+        }
+      ],
+      "targets": {
+        "login": {
+          "id": "login",
+          "name": "Login"
+        },
+        "home": {
+          "id": "home",
+          "name": "Home"
+        },
+        "addproductmaster": {
+          "id": "addproductmaster",
+          "name": "AddProductMaster"
+        },
+        "addproductinventory": {
+          "id": "addproductinventory",
+          "name": "AddProductInventory"
+        },
+        "analyticsdashboard": {
+          "id": "analyticsdashboard",
+          "name": "AnalyticsDashboard"
+        },
+        "viewproductmaster": {
+          "id": "viewproductmaster",
+          "name": "ViewProductMaster"
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    }
+  }
 }
