@@ -82,10 +82,10 @@
                                     <l:BlockLayoutCell id="Cell3" width="1">
                                         <l:content>
                                             <HBox justifyContent="SpaceBetween">
-                                                <FlexBox class="analayticstitle" justifyContent="Center" alignItems="Center">
+                                                <FlexBox class="trendingTitle" justifyContent="Center" alignItems="Center">
                                                     <Text text="Trending Products" class="myCustomText sapUiSmallMargin" />
                                                 </FlexBox>
-                                                <FlexBox class="analayticstitle" justifyContent="Center" alignItems="Center">
+                                                <FlexBox class="monthTitle" justifyContent="Center" alignItems="Center">
                                                     <Text text="This Month" class="myCustomText sapUiSmallMargin" />
                                                 </FlexBox>
                                             </HBox>
