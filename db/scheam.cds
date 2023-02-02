@@ -29,4 +29,5 @@ entity FT_INVENTORY{
     uom : String;
     exp_date : String;
     batch_no : String;
+    month : String;
 }

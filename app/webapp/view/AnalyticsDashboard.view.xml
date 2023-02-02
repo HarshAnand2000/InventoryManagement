@@ -1,48 +1,139 @@
-<mvc:View controllerName="sap.ui.inventory.controller.AnalyticsDashboard" xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" xmlns:viz="sap.viz.ui5.controls" xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds" xmlns:viz.data="sap.viz.ui5.data">
+<mvc:View
+    controllerName="sap.ui.inventory.controller.AnalyticsDashboard"
+    xmlns:core="sap.ui.core"
+    xmlns:grid="sap.ui.layout.cssgrid"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:viz="sap.viz.ui5.controls"
+    xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+    xmlns:viz.data="sap.viz.ui5.data"
+>
     <App>
-        <Panel>
-            <HBox justifyContent="SpaceBetween" class="myNav" height="60px">
-                <FlexBox justifyContent="Center" alignItems="Center" width="auto">
-                    <Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Wipro_Primary_Logo_Color_RGB.svg/440px-Wipro_Primary_Logo_Color_RGB.svg.png" width="50px" class="sapUiSmallMargin" />
-                    <FormattedText htmlText="Inventory Management Solution" class="sapUiSmallMargin myCustomText" />
-                </FlexBox>
-                <HBox>
-                    <FlexBox alignItems="Center">
-                        <Button text="Home" width="auto" type="Unstyled" class="sapUiSmallMargin btn" press=".onHome" />
-                        <Button text="Add Product Master" width="auto" type="Unstyled" class="sapUiSmallMargin btn" press=".onAddProductMaster" />
-                        <Button text="Add Product Inventory" width="auto" type="Unstyled" class="sapUiSmallMargin btn" press=".onAddProductInventory" />
-                    </FlexBox>
-                    <VBox alignItems="Center" justifyContent="Center" class="sapUiSmallMargin">
-                        <core:Icon src="sap-icon://person-placeholder" class="iconSize" color="white" />
-                        <Text text="Alice" class="icontext" />
-                    </VBox>
-                </HBox>
-            </HBox>
-            <FlexBox class="analayticstitle" justifyContent="Center" alignItems="Center">
-                <Text text="Analytics Dashboard" class="myCustomText sapUiSmallMargin" />
-            </FlexBox>
-            <viz:VizFrame id="idVizFrame" uiConfig="{applicationSet:'fiori'}"
-                height='100%' width="100%" vizType='bar'>
-                <viz:dataset>
-                    <viz.data:FlattenedDataset data="{/FT_INVENTORY}">
-                        <viz.data:dimensions>
-                            <viz.data:DimensionDefinition name="Category"
-                                value="{prd_cat}" />
-                        </viz.data:dimensions>
-                        <viz.data:measures>
-                            <viz.data:MeasureDefinition name="Stocks"
-                                value="{stocks}" />
-                        </viz.data:measures>
-                    </viz.data:FlattenedDataset>
-                </viz:dataset>
+        <pages>
+            <Page showHeader="false">
+                <content>
+                    <Panel>
+                        <HBox justifyContent="SpaceBetween" class="myNav" height="60px">
+                            <FlexBox justifyContent="Center" alignItems="Center" width="auto">
+                                <Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Wipro_Primary_Logo_Color_RGB.svg/440px-Wipro_Primary_Logo_Color_RGB.svg.png" width="50px" class="sapUiSmallMargin" />
+                                <FormattedText htmlText="Inventory Management Solution" class="sapUiSmallMargin myCustomText" />
+                            </FlexBox>
+                            <HBox>
+                                <FlexBox alignItems="Center">
+                                    <Button text="Home" width="auto" type="Unstyled" class="sapUiSmallMargin btn" press=".onHome" />
+                                    <Button text="Add Product Master" width="auto" type="Unstyled" class="sapUiSmallMargin btn" press=".onAddProductMaster" />
+                                    <Button text="Add Product Inventory" width="auto" type="Unstyled" class="sapUiSmallMargin btn" press=".onAddProductInventory" />
+                                </FlexBox>
+                                <VBox alignItems="Center" justifyContent="Center" class="sapUiSmallMargin">
+                                    <core:Icon src="sap-icon://person-placeholder" class="iconSize" color="white" />
+                                    <Text text="Alice" class="icontext" />
+                                </VBox>
+                            </HBox>
+                        </HBox>
+                        <FlexBox class="analayticstitle" justifyContent="Center" alignItems="Center">
+                            <Text text="Analytics Dashboard" class="myCustomText sapUiSmallMargin" />
+                        </FlexBox>
+                        <l:BlockLayout id="_IDGenBlockLayout1" background="Dashboard" visible="true">
+                            <l:content>
+                                <l:BlockLayoutRow id="Row1">
+                                    <l:BlockLayoutCell class="Cell1" width="1">
+                                        <l:content>
+                                            <viz:VizFrame uiConfig="{applicationSet: 'fiori'}" vizType="bar" vizProperties="{title: {text: 'Trending Products'}}">
+                                                <viz:dataset>
+                                                    <viz.data:FlattenedDataset data="{/FT_INVENTORY}">
+                                                        <viz.data:dimensions>
+                                                            <viz.data:DimensionDefinition name="Product Name" value="{prd_name}" />
+                                                        </viz.data:dimensions>
+                                                        <viz.data:measures>
+                                                            <viz.data:MeasureDefinition name="Stocks" value="{stocks}" />
+                                                        </viz.data:measures>
+                                                    </viz.data:FlattenedDataset>
+                                                </viz:dataset>
+                                                <viz:feeds>
+                                                    <viz.feeds:FeedItem uid="valueAxis" type="Measure" values="Stocks" />
+                                                    <viz.feeds:FeedItem uid="categoryAxis" type="Dimension" values="Product Name" />
+                                                </viz:feeds>
+                                            </viz:VizFrame>
+                                        </l:content>
+                                    </l:BlockLayoutCell>
+                                    <l:BlockLayoutCell id="Cell2" width="1">
+                                        <l:content>
+                                            <viz:VizFrame uiConfig="{applicationSet:'fiori'}" height='100%' width="100%" vizType='pie'>
+                                                <viz:dataset>
+                                                    <viz.data:FlattenedDataset data="{/FT_INVENTORY}">
+                                                        <viz.data:dimensions>
+                                                            <viz.data:DimensionDefinition name="prd_cat" value="{prd_cat}" />
+                                                        </viz.data:dimensions>
+                                                        <viz.data:measures>
+                                                            <viz.data:MeasureDefinition name="stocks" value="{stocks}" />
+                                                        </viz.data:measures>
+                                                    </viz.data:FlattenedDataset>
+                                                </viz:dataset>
+                                                <viz:feeds>
+                                                    <viz.feeds:FeedItem uid="size" type="Measure" values="stocks" />
+                                                    <viz.feeds:FeedItem uid="color" type="Dimension" values="prd_cat" />
+                                                </viz:feeds>
+                                            </viz:VizFrame>
+                                        </l:content>
+                                    </l:BlockLayoutCell>
+                                </l:BlockLayoutRow>
+                                <l:BlockLayoutRow id="Row2">
+                                    <l:BlockLayoutCell id="Cell3" width="1">
+                                        <l:content>
+                                            <HBox justifyContent="SpaceBetween">
+                                                <FlexBox class="analayticstitle" justifyContent="Center" alignItems="Center">
+                                                    <Text text="Trending Products" class="myCustomText sapUiSmallMargin" />
+                                                </FlexBox>
+                                                <FlexBox class="analayticstitle" justifyContent="Center" alignItems="Center">
+                                                    <Text text="This Month" class="myCustomText sapUiSmallMargin" />
+                                                </FlexBox>
+                                            </HBox>
+                                            <viz:VizFrame id="idVizFrame4" uiConfig="{applicationSet: 'fiori'}" vizType="bar" vizProperties="{title: {text: 'Trending Products'}}">
+                                                <viz:dataset>
+                                                    <viz.data:FlattenedDataset data="{/FT_INVENTORY}">
+                                                        <viz.data:dimensions>
+                                                            <viz.data:DimensionDefinition name="Product Name" value="{prd_name}" />
+                                                        </viz.data:dimensions>
+                                                        <viz.data:measures>
+                                                            <viz.data:MeasureDefinition name="Stocks" value="{stocks}" />
+                                                        </viz.data:measures>
+                                                    </viz.data:FlattenedDataset>
+                                                </viz:dataset>
+                                                <viz:feeds>
+                                                    <viz.feeds:FeedItem uid="valueAxis" type="Measure" values="Stocks" />
+                                                    <viz.feeds:FeedItem uid="categoryAxis" type="Dimension" values="Product Name" />
+                                                </viz:feeds>
+                                            </viz:VizFrame>
+                                        </l:content>
+                                    </l:BlockLayoutCell>
+                                    <l:BlockLayoutCell id="Cell4" width="1">
+                                        <l:content>
+                                            <viz:VizFrame id="idVizFrame" uiConfig="{applicationSet:'fiori'}" height='100%' width="100%" vizType='pie'>
+                                                <viz:dataset>
+                                                    <viz.data:FlattenedDataset data="{/FT_INVENTORY}">
+                                                        <viz.data:dimensions>
+                                                            <viz.data:DimensionDefinition name="prd_cat" value="{prd_cat}" />
+                                                        </viz.data:dimensions>
+                                                        <viz.data:measures>
+                                                            <viz.data:MeasureDefinition name="stocks" value="{stocks}" />
+                                                        </viz.data:measures>
+                                                    </viz.data:FlattenedDataset>
+                                                </viz:dataset>
 
-                <viz:feeds>
-                    <viz.feeds:FeedItem id='valueAxisFeed' uid="valueAxis" type="Measure"
-                        values="Category" />
-                    <viz.feeds:FeedItem uid="categoryAxis" type="Dimension"
-                        values="Stocks" />
-                </viz:feeds>
-            </viz:VizFrame>
-        </Panel>
+                                                <viz:feeds>
+                                                    <viz.feeds:FeedItem uid="size" type="Measure" values="stocks" />
+                                                    <viz.feeds:FeedItem uid="color" type="Dimension" values="prd_cat" />
+                                                </viz:feeds>
+                                            </viz:VizFrame>
+                                        </l:content>
+                                    </l:BlockLayoutCell>
+                                </l:BlockLayoutRow>
+                            </l:content>
+                        </l:BlockLayout>
+                    </Panel>
+                </content>
+            </Page>
+        </pages>
     </App>
 </mvc:View>

@@ -108,3 +108,7 @@ input[type=password] {
 .place ::placeholder {
     color: white;
 }
+
+.flex{
+    background-color: #00308F;
+}
