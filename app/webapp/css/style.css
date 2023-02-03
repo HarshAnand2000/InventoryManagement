@@ -112,3 +112,48 @@ input[type=password] {
 .flex{
     background-color: #00308F;
 }
+
+.trendingTitle{
+    background-color: #50C878;
+    height: 45px;
+    width:300px;
+    border: 2px solid #00308F;
+    border-radius: 5px;
+}
+
+.monthTitle{
+    background-color: #2988c2;
+    height: 45px;
+    border: 2px solid #00308F;
+    border-radius: 5px;
+}
+
+.data{
+    background-color: #06B0F0;
+    border: 2px solid #00308F;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.data .trendingHeading{
+    color:white;
+}
+
+.trendingText{
+    font-size: 20px;
+    
+}
+
+
+input[name="searchCategory"]{
+    background-color: white !important;
+    color:black;
+}
+
+.fastMovingBtn{
+    color:white;
+    border: none;
+    border-radius: 5px;
+    background-color: #4472C4;
+    
+}

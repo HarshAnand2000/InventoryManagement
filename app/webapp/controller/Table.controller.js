@@ -32,8 +32,8 @@ sap.ui.define([
 			this._oVSD.open();
 		},
 
-		onSearchEmployeesTable : function (oEvent) {
-			this._applySearchFilter( oEvent.getSource().getValue() );
+		onSearchInventoryTable : function(oEvent){
+			this._applySearchFilter(this.byId("searchField").getValue())
 		},
 
 		_initViewSettingsDialog : function () {

@@ -39,40 +39,55 @@
                                 <l:BlockLayoutRow id="Row1">
                                     <l:BlockLayoutCell class="Cell1" width="1">
                                         <l:content>
-                                            <viz:VizFrame uiConfig="{applicationSet: 'fiori'}" vizType="bar" vizProperties="{title: {text: 'Trending Products'}}">
-                                                <viz:dataset>
-                                                    <viz.data:FlattenedDataset data="{/FT_INVENTORY}">
-                                                        <viz.data:dimensions>
-                                                            <viz.data:DimensionDefinition name="Product Name" value="{prd_name}" />
-                                                        </viz.data:dimensions>
-                                                        <viz.data:measures>
-                                                            <viz.data:MeasureDefinition name="Stocks" value="{stocks}" />
-                                                        </viz.data:measures>
-                                                    </viz.data:FlattenedDataset>
-                                                </viz:dataset>
-                                                <viz:feeds>
-                                                    <viz.feeds:FeedItem uid="valueAxis" type="Measure" values="Stocks" />
-                                                    <viz.feeds:FeedItem uid="categoryAxis" type="Dimension" values="Product Name" />
-                                                </viz:feeds>
-                                            </viz:VizFrame>
+                                            <VBox height="500px">
+                                                <HBox justifyContent="SpaceBetween" class="sapUiMediumMarginBottom">
+                                                    <VBox class="data sapUiSmallMargin" width="300px" height="150px">
+                                                        <Text text="Most Selling Individual Item for the month" class=" sapUiSmallMargin trendingHeading" />
+                                                        <Text text="Vitamin C Face Wash" class=" sapUiSmallMargin trendingText" />
+                                                    </VBox>
+                                                    <VBox class="data sapUiSmallMargin" width="300px">
+                                                        <Text text="Most Demanded Category for the month" class="sapUiSmallMargin trendingHeading" />
+                                                        <Text text="Skin Care" class=" sapUiSmallMargin trendingText" />
+                                                    </VBox>
+                                                </HBox>
+                                                <HBox justifyContent="Center">
+                                                    <VBox class="data sapUiSmallMargin" width="300px">
+                                                        <Text text="YOY-Growth of Inventory" class=" sapUiSmallMargin trendingHeading" />
+                                                        <FlexBox justifyContent="Center" alignItems="Center">
+                                                            <Text text="20%" class=" sapUiSmallMargin trendingText" />
+                                                            <core:Icon src="sap-icon://arrow-top" class="iconSize" color="#32de84" />
+                                                        </FlexBox>
+                                                    </VBox>
+                                                </HBox>
+                                            </VBox>
                                         </l:content>
                                     </l:BlockLayoutCell>
                                     <l:BlockLayoutCell id="Cell2" width="1">
                                         <l:content>
-                                            <viz:VizFrame uiConfig="{applicationSet:'fiori'}" height='100%' width="100%" vizType='pie'>
+                                            <HBox justifyContent="Center">
+                                                <FlexBox width="500px" class="trendingTitle" justifyContent="Center" alignItems="Center">
+                                                    <Text text="Category Trend Chart for 1 Year" class="myCustomText sapUiSmallMargin" />
+                                                </FlexBox>
+                                            </HBox>
+                                            <viz:VizFrame uiConfig="{applicationSet:'fiori'}" height='100%' width="100%" vizType='line' vizProperties="{title: {text: ''}}">
                                                 <viz:dataset>
-                                                    <viz.data:FlattenedDataset data="{/FT_INVENTORY}">
+                                                    <viz.data:FlattenedDataset data="{/YearlyDetails}">
                                                         <viz.data:dimensions>
-                                                            <viz.data:DimensionDefinition name="prd_cat" value="{prd_cat}" />
+                                                            <viz.data:DimensionDefinition name="Month" value="{month}" />
                                                         </viz.data:dimensions>
                                                         <viz.data:measures>
-                                                            <viz.data:MeasureDefinition name="stocks" value="{stocks}" />
+                                                            <viz.data:MeasureDefinition name="Detergent" value="{detergent}" />
+                                                            <viz.data:MeasureDefinition name="Soap" value="{soap}" />
+                                                            <viz.data:MeasureDefinition name="SkinCare" value="{skincare}" />
                                                         </viz.data:measures>
                                                     </viz.data:FlattenedDataset>
                                                 </viz:dataset>
+
                                                 <viz:feeds>
-                                                    <viz.feeds:FeedItem uid="size" type="Measure" values="stocks" />
-                                                    <viz.feeds:FeedItem uid="color" type="Dimension" values="prd_cat" />
+                                                    <viz.feeds:FeedItem id='categoryAxisFeed' uid="categoryAxis" type="Dimension" values="Month" />
+                                                    <viz.feeds:FeedItem id='valueAxisFeed' uid="valueAxis" type="Measure" values="Detergent" />
+                                                    <viz.feeds:FeedItem uid="valueAxis" type="Measure" values="Soap" />
+                                                    <viz.feeds:FeedItem uid="valueAxis" type="Measure" values="SkinCare" />
                                                 </viz:feeds>
                                             </viz:VizFrame>
                                         </l:content>
@@ -89,19 +104,19 @@
                                                     <Text text="This Month" class="myCustomText sapUiSmallMargin" />
                                                 </FlexBox>
                                             </HBox>
-                                            <viz:VizFrame id="idVizFrame4" uiConfig="{applicationSet: 'fiori'}" vizType="bar" vizProperties="{title: {text: 'Trending Products'}}">
+                                            <viz:VizFrame id="idVizFrame4" uiConfig="{applicationSet: 'fiori'}" vizType="bar" vizProperties="{title: {text: ''}}">
                                                 <viz:dataset>
-                                                    <viz.data:FlattenedDataset data="{/FT_INVENTORY}">
+                                                    <viz.data:FlattenedDataset data="{/MonthlyDetails}">
                                                         <viz.data:dimensions>
-                                                            <viz.data:DimensionDefinition name="Product Name" value="{prd_name}" />
+                                                            <viz.data:DimensionDefinition name="Product Name" value="{productname}" />
                                                         </viz.data:dimensions>
                                                         <viz.data:measures>
-                                                            <viz.data:MeasureDefinition name="Stocks" value="{stocks}" />
+                                                            <viz.data:MeasureDefinition name="Sales" value="{prd_sale}" />
                                                         </viz.data:measures>
                                                     </viz.data:FlattenedDataset>
                                                 </viz:dataset>
                                                 <viz:feeds>
-                                                    <viz.feeds:FeedItem uid="valueAxis" type="Measure" values="Stocks" />
+                                                    <viz.feeds:FeedItem uid="valueAxis" type="Measure" values="Sales" />
                                                     <viz.feeds:FeedItem uid="categoryAxis" type="Dimension" values="Product Name" />
                                                 </viz:feeds>
                                             </viz:VizFrame>
@@ -109,21 +124,29 @@
                                     </l:BlockLayoutCell>
                                     <l:BlockLayoutCell id="Cell4" width="1">
                                         <l:content>
-                                            <viz:VizFrame id="idVizFrame" uiConfig="{applicationSet:'fiori'}" height='100%' width="100%" vizType='pie'>
+                                            <HBox justifyContent="SpaceBetween">
+                                                <FlexBox class="trendingTitle" justifyContent="Center" alignItems="Center">
+                                                    <Text text="Trending Categories" class="myCustomText sapUiSmallMargin" />
+                                                </FlexBox>
+                                                <FlexBox class="monthTitle" justifyContent="Center" alignItems="Center">
+                                                    <Text text="This Month" class="myCustomText sapUiSmallMargin" />
+                                                </FlexBox>
+                                            </HBox>
+                                            <viz:VizFrame id="idVizFrame" uiConfig="{applicationSet:'fiori'}" height='100%' width="100%" vizType='pie' vizProperties="{title: {text: ''}}">
                                                 <viz:dataset>
-                                                    <viz.data:FlattenedDataset data="{/FT_INVENTORY}">
+                                                    <viz.data:FlattenedDataset data="{/MonthlyDetails}">
                                                         <viz.data:dimensions>
-                                                            <viz.data:DimensionDefinition name="prd_cat" value="{prd_cat}" />
+                                                            <viz.data:DimensionDefinition name="Category" value="{category}" />
                                                         </viz.data:dimensions>
                                                         <viz.data:measures>
-                                                            <viz.data:MeasureDefinition name="stocks" value="{stocks}" />
+                                                            <viz.data:MeasureDefinition name="Sales" value="{cat_sale}" />
                                                         </viz.data:measures>
                                                     </viz.data:FlattenedDataset>
                                                 </viz:dataset>
 
                                                 <viz:feeds>
-                                                    <viz.feeds:FeedItem uid="size" type="Measure" values="stocks" />
-                                                    <viz.feeds:FeedItem uid="color" type="Dimension" values="prd_cat" />
+                                                    <viz.feeds:FeedItem uid="size" type="Measure" values="Sales" />
+                                                    <viz.feeds:FeedItem uid="color" type="Dimension" values="Category" />
                                                 </viz:feeds>
                                             </viz:VizFrame>
                                         </l:content>

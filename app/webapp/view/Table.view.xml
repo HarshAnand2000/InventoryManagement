@@ -4,13 +4,11 @@
 		sorter : {
             path : 'prd_id' 
          }
-		}" 
-	id="inventoryTable" class="inventoryTable">
+		}" id="inventoryTable" class="inventoryTable">
         <headerToolbar>
             <Toolbar>
-                <Title text="Inventory Details" level="H2" />
-                <ToolbarSpacer />
-                <SearchField id="searchField" search=".onSearchEmployeesTable" width="50%" />
+                <Input id="searchField" placeholder="Select Product Catgeory" width="300px" name="searchCategory" />
+                <Button id="fastMoving" text="Fast Moving" width="10%" type="Unstyled" class="sapUiSmallMargin fastMovingBtn" press=".onSearchInventoryTable" />
                 <Button icon="sap-icon://sort" press=".onSortButtonPressed" />
             </Toolbar>
         </headerToolbar>
