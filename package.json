@@ -21,5 +21,15 @@
   "sapux": [
     "app/usermaster",
     "app/productmaster"
-  ]
+  ],
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "sqlite",
+        "credentials": {
+          "database": "db/inventory.db"
+        }
+      }
+    }
+  }
 }

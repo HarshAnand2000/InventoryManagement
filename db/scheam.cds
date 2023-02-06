@@ -12,16 +12,16 @@ entity DT_PRODUCT {
         created_on   : String;
         created_by   : String;
         uom          : String;
-        active       : Boolean;
+        active       : String;
         FT_Inventory : Composition of many FT_INVENTORY on FT_Inventory.prd_cat = prd_cat;
 }
 
 entity FT_INVENTORY {
-   key prd_id   : String;
+    prd_id   : String;
     prd_cat  : String;
     prd_name : String;
     prd_type : String;
-    added_on : Timestamp;
+    key added_on : String;
     added_by : String;
     qty      : String;
     stocks   : String;
@@ -29,7 +29,6 @@ entity FT_INVENTORY {
     uom      : String;
     exp_date : String;
     batch_no : String;
-    month    : String;
 }
 
 entity YearlyDetails {
@@ -37,8 +36,7 @@ entity YearlyDetails {
     detergent : String;
     soap : String;
     skincare : String;
-    cat: String;
-    monthlysale: String;
+    toothpaste : String;
 }
 
 entity MonthlyDetails{

@@ -1,6 +1,6 @@
-prd_id;prd_cat;prd_name;;added_on;added_by;qty;stocks;st_unit;uom;exp_date;batch_no
-001;Detergent;Surf Excel;;2023-01-20T06:30:12.329Z;Joe;100;1200;pieces;gm;2023-06-20;22222
-002;Detergent;Tide;;2023-01-21T06:30:12.329Z;Jay;100;1200;pieces;gm;2023-06-20;22222
-003;Soap;Lifebouy;;2023-01-22T06:30:12.329Z;John;100;1200;pieces;gm;2023-06-20;22222
-004;SkinCare;Salicylic Acid Face Wash;;2023-02-22T06:30:12.329Z;John;100;1200;pieces;gm;2023-06-20;22222
-005;SkinCare;VitaminC Face Wash;;2023-02-23T06:30:12.329Z;John;100;1200;pieces;gm;2023-06-20;22222
+prd_id;prd_cat;prd_name;prd_type;added_on;added_by;qty;stocks;st_unit;uom;exp_date;batch_no
+001;Detergent;Surf Excel;Washing;2023-01-20T06:30:12.329Z;Joe;100;1200;pieces;gm;2023-06-20;22222
+002;Detergent;Tide;Washing;2023-01-21T06:30:12.329Z;Jay;100;1200;pieces;gm;2023-06-20;22222
+003;Soap;Lifebouy;Body Care;2023-01-22T06:30:12.329Z;John;100;1200;pieces;gm;2023-06-20;22222
+004;Skin Care;Salicylic Acid Face Wash;Skin Care;2023-02-22T06:30:12.329Z;John;100;1200;pieces;gm;2023-06-20;22222
+005;Skin Care;VitaminC Face Wash;Skin Care;2023-02-23T06:30:12.329Z;John;100;1200;pieces;gm;2023-06-20;22222

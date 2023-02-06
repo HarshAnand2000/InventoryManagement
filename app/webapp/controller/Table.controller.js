@@ -67,13 +67,6 @@ sap.ui.define([
 		_applySearchFilter : function (sSearchQuery) {
 			var aFilters, oFilter, oBinding;
 
-			// first check if we already have this search value
-			if (this._sSearchQuery === sSearchQuery) {
-				return;
-			}
-			this._sSearchQuery = sSearchQuery;
-			this.byId("searchField").setValue(sSearchQuery);
-
 			// add filters for search
 			aFilters = [];
 			if (sSearchQuery && sSearchQuery.length > 0) {

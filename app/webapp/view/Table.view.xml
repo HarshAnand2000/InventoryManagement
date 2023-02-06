@@ -22,6 +22,9 @@
             <Column demandPopin="true">
                 <Text text="Product Category" class="headColor" />
             </Column>
+            <Column demandPopin="true">
+                <Text text="Product Type" class="headColor" />
+            </Column>
             <Column minScreenWidth="Tablet" demandPopin="true">
                 <Text text="Added On" class="headColor" />
             </Column>
@@ -47,6 +50,7 @@
                     <Text text="{prd_id}" />
                     <Text text="{prd_name}" />
                     <Text text="{prd_cat}" />
+                    <Text text="{prd_type}" />
                     <Text text="{added_on}" />
                     <Text text="{exp_date}" />
                     <Text text="{qty}" />
