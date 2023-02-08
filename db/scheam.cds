@@ -21,7 +21,7 @@ entity FT_INVENTORY {
     prd_cat  : String;
     prd_name : String;
     prd_type : String;
-    key added_on : String;
+    key added_on : Timestamp;
     added_by : String;
     qty      : String;
     stocks   : String;

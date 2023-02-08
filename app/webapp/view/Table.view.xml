@@ -7,7 +7,7 @@
 		}" id="inventoryTable" class="inventoryTable">
         <headerToolbar>
             <Toolbar>
-                <Input id="searchField" placeholder="Select Product Catgeory" width="300px" name="searchCategory" />
+                <Input id="searchField" placeholder="Select Product Catgeory" width="300px" name="searchCategory" class="sapUiLargeMarginBegin"/>
                 <Button id="fastMoving" text="Fast Moving" width="10%" type="Unstyled" class="sapUiSmallMargin fastMovingBtn" press=".onSearchInventoryTable" />
                 <Button icon="sap-icon://sort" press=".onSortButtonPressed" />
             </Toolbar>

@@ -47,15 +47,15 @@
                                                     </VBox>
                                                     <VBox class="data sapUiSmallMargin" width="300px">
                                                         <Text text="Most Demanded Category for the month" class="sapUiSmallMargin trendingHeading" />
-                                                        <Text text="Skin Care" class=" sapUiSmallMargin trendingText" />
+                                                        <Text id="arrowIcon" text="Skin Care" class=" sapUiSmallMargin trendingText" />
                                                     </VBox>
                                                 </HBox>
                                                 <HBox justifyContent="Center">
                                                     <VBox class="data sapUiSmallMargin" width="300px">
                                                         <Text text="YOY-Growth of Inventory" class=" sapUiSmallMargin trendingHeading" />
-                                                        <FlexBox justifyContent="Center" alignItems="Center">
+                                                        <FlexBox  justifyContent="Center" alignItems="Center">
                                                             <Text text="20%" class=" sapUiSmallMargin trendingText" />
-                                                            <core:Icon src="sap-icon://arrow-top" class="iconSize" color="#32de84" />
+                                                            <core:Icon src="sap-icon://arrow-top"  class="iconSize" color="#32de84" />
                                                         </FlexBox>
                                                     </VBox>
                                                 </HBox>

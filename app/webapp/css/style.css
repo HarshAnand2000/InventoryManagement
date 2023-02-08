@@ -65,6 +65,10 @@ button {
     margin-right: auto;
 }
 
+.inventoryTable{
+    margin-top : 50px;
+}
+
 .inventoryTable th {
     background: #4472C4;
 }
@@ -157,4 +161,8 @@ input[name="searchCategory"]{
     border-radius: 5px;
     background-color: #4472C4;
     
+}
+
+.mystyle{
+    color : black;
 }
