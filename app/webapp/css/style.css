@@ -163,6 +163,10 @@ input[name="searchCategory"]{
     
 }
 
-.mystyle{
-    color : black;
+.iconUpColor{
+    color : #32de84;
+}
+
+.iconDownColor{
+    color : red;
 }

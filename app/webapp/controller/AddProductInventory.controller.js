@@ -20,7 +20,7 @@ sap.ui.define([
                 var oListBinding = oModel.bindList("/FT_INVENTORY"); 
                 var oContext = oListBinding.create({ "prd_id": prd_id, "prd_cat": prd_cat, "prd_name": prd_name, "prd_type": prd_type, "added_on": added_on, "added_by": added_by, "qty" : qty, "stocks" : stocks, "st_unit" : st_unit, "uom": uom, "exp_date": exp_date, "batch_no": batch_no });
        
-                MessageBox.success("Successfully submit !");
+                MessageBox.success("Product Added Successfully! ");
        
        
              },

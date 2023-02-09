@@ -1,7 +1,7 @@
 sap.ui.define([
    "sap/ui/core/mvc/Controller",
    "sap/m/MessageBox"
-], function (BaseController,MessageBox) {
+], function (BaseController, MessageBox) {
    "use strict";
 
    return BaseController.extend("sap.ui.inventory.controller.Home", {

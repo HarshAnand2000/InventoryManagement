@@ -18,7 +18,7 @@
                                     </FlexBox>
                                     <VBox alignItems="Center" justifyContent="Center" class="sapUiSmallMargin">
                                         <core:Icon src="sap-icon://person-placeholder" class="iconSize" color="white" />
-                                        <Text text="Alice" class="icontext" />
+                                        <Text id="profileName" text="{TempDataModel>/UserName}" class="icontext" />
                                     </VBox>
                                 </HBox>
                             </HBox>

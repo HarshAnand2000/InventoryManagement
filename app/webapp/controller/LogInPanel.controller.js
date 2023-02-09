@@ -5,10 +5,6 @@ sap.ui.define([
    "use strict";
    return Controller.extend("sap.ui.inventory.controller.LogInPanel", {
 
-
-
-
-
       onLogIn: function (oEvent) {
          var oModel = new sap.ui.model.odata.v4.ODataModel({ serviceUrl: "../../catalog/", synchronizationMode: "None" });
          var oContext = oModel.bindContext("/DT_USER");
@@ -17,22 +13,36 @@ sap.ui.define([
          var password = this.getView().byId("pass_input");
          var oRouter = this.getOwnerComponent().getRouter();
 
+         var uname = username.getValue();
+         this.getView().getModel("TempDataModel").setProperty("/", { "UserName": uname });
+
+
          oContext.requestObject().then(function (result) {
-            var user = result.value[0].username;
-            var pass = result.value[0].password;
-            if (username.getValue() === "") {
-               MessageToast.show("Please enter username", { at: "center top" }); return;
-            }
-            else if (password.getValue() === "") {
-               MessageToast.show("Please enter password", { at: "center top" }); return;
-            }
-            else {
+            var size = result.value.length;
+            var i = 0;
+            while (i < size) {
+               var user = result.value[i].username;
+               var pass = result.value[i].password;
+               console.log(user, pass);
+
+               if (username.getValue() === "") {
+                  MessageToast.show("Please enter username", { at: "center top" }); return;
+               }
+               if (password.getValue() === "") {
+                  MessageToast.show("Please enter password", { at: "center top" }); return;
+               }
                if (username.getValue() === user && password.getValue() === pass) {
                   MessageToast.show("Congratulations!!! You have successfully Logged in...", { at: "center top" });
+                  oRouter.navTo("home");
+                  break;
                }
-               else { MessageToast.show("Invalid username or password", { at: "center top" }); return; }
+               else {
+
+                  MessageToast.show("Invalid username and password", { at: "center top" });
+                  i++;
+               }
+
             }
-            oRouter.navTo("home");
          });
 
       }

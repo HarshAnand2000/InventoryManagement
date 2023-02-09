@@ -2,6 +2,9 @@ sap.ui.define([
     "sap/ui/core/mvc/Controller","sap/m/MessageBox"], function (Controller, MessageBox) {
          "use strict"; return Controller.extend("sap.ui.inventory.controller.AddProductMaster", {
 
+
+            
+
             onSubmit: function (oEvent) {
 
 
@@ -17,7 +20,7 @@ sap.ui.define([
                 var oListBinding = oModel.bindList("/DT_PRODUCT"); 
                 var oContext = oListBinding.create({ "prd_id": prd_id, "prd_cat": prd_cat, "prd_type": prd_type, "created_on": created_on, "created_by": created_by, "uom": uom, "active": active });
        
-                MessageBox.success("Successfully submit !");
+                MessageBox.success("Product Added Successfully!");
        
        
              },
