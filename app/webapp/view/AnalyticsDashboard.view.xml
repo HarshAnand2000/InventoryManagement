@@ -25,10 +25,15 @@
                                     <Button text="Add Product Master" width="auto" type="Unstyled" class="sapUiSmallMargin btn" press=".onAddProductMaster" />
                                     <Button text="Add Product Inventory" width="auto" type="Unstyled" class="sapUiSmallMargin btn" press=".onAddProductInventory" />
                                 </FlexBox>
-                                <VBox alignItems="Center" justifyContent="Center" class="sapUiSmallMargin">
-                                    <core:Icon src="sap-icon://person-placeholder" class="iconSize" color="white" />
-                                    <Text text="{TempDataModel>/UserName}" class="icontext" />
-                                </VBox>
+                                <HBox justifyContent="Center" alignItems="Center" class="sapUiSmallMargin">
+                                    <MenuButton text="{TempDataModel>/UserName}" icon="sap-icon://person-placeholder" type="Success" class="profileButton">
+                                        <menu>
+                                            <Menu>
+                                                <MenuItem text="LogOut" icon="sap-icon://log" press="onLogOut" />
+                                            </Menu>
+                                        </menu>
+                                    </MenuButton>
+                                </HBox>
                             </HBox>
                         </HBox>
                         <FlexBox class="analayticstitle" justifyContent="Center" alignItems="Center">
@@ -53,9 +58,9 @@
                                                 <HBox justifyContent="Center">
                                                     <VBox class="data sapUiSmallMargin" width="300px">
                                                         <Text text="YOY-Growth of Inventory" class=" sapUiSmallMargin trendingHeading" />
-                                                        <FlexBox  justifyContent="Center" alignItems="Center">
+                                                        <FlexBox justifyContent="Center" alignItems="Center">
                                                             <Text id="arrowText" text="+20%" class=" sapUiSmallMargin trendingText" />
-                                                            <core:Icon id="arrowIcon" src="sap-icon://arrow-top"  class="iconSize" />
+                                                            <core:Icon id="arrowIcon" src="sap-icon://arrow-top" class="iconSize" />
                                                         </FlexBox>
                                                     </VBox>
                                                 </HBox>
@@ -133,7 +138,7 @@
                                                     <Text text="This Month" class="myCustomText sapUiSmallMargin" />
                                                 </FlexBox>
                                             </HBox>
-                                            <viz:VizFrame id="idVizFrame" uiConfig="{applicationSet:'fiori'}" height='100%' width="100%" vizType='pie' vizProperties="{title: {text: ''}}">
+                                            <viz:VizFrame id="idVizFrame" uiConfig="{applicationSet:'fiori'}" height='100%' width="100%" vizType='donut' vizProperties="{title: {text: ''}}">
                                                 <viz:dataset>
                                                     <viz.data:FlattenedDataset data="{/MonthlyDetails}">
                                                         <viz.data:dimensions>

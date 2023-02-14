@@ -34,6 +34,8 @@ sap.ui.define([
                if (username.getValue() === user && password.getValue() === pass) {
                   MessageToast.show("Congratulations!!! You have successfully Logged in...", { at: "center top" });
                   oRouter.navTo("home");
+                  username.setValue("");
+                  password.setValue("");
                   break;
                }
                else {
@@ -44,7 +46,7 @@ sap.ui.define([
 
             }
          });
-
+         
       }
    });
 });

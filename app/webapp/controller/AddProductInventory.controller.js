@@ -38,6 +38,11 @@ sap.ui.define([
                 var oRouter = this.getOwnerComponent().getRouter();
                 //var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
                 oRouter.navTo("home");
-            }
+            },
+            onLogOut: function (oEvent) {
+                var oRouter = this.getOwnerComponent().getRouter();
+                //var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+                oRouter.navTo("login");
+             }
         });
     });

@@ -1,5 +1,6 @@
 <mvc:View controllerName="sap.ui.inventory.controller.Table" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc">
-    <Table items="{
+    
+    <Table mode="SingleSelectLeft" items="{
 		path:'/FT_INVENTORY',
 		sorter : {
             path : 'prd_id' 
@@ -7,9 +8,11 @@
 		}" id="inventoryTable" class="inventoryTable">
         <headerToolbar>
             <Toolbar>
-                <Input id="searchField" placeholder="Select Product Catgeory" width="300px" name="searchCategory" class="sapUiLargeMarginBegin"/>
+                <Input id="searchField" placeholder="Select Product Catgeory" width="300px" name="searchCategory" class="sapUiLargeMarginBegin" />
                 <Button id="fastMoving" text="Fast Moving" width="10%" type="Unstyled" class="sapUiSmallMargin fastMovingBtn" press=".onSearchInventoryTable" />
                 <Button icon="sap-icon://sort" press=".onSortButtonPressed" />
+                <Button icon="sap-icon://delete" press="onDelete" />
+                <Button icon="sap-icon://refresh" press="onRefresh"></Button>
             </Toolbar>
         </headerToolbar>
         <columns>

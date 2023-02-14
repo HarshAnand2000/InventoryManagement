@@ -72,6 +72,11 @@ sap.ui.define([
       onViewProductMaster: function (oEvent) {
          var oRouter = this.getOwnerComponent().getRouter();
          oRouter.navTo("viewproductmaster");
+      },
+      onLogOut: function (oEvent) {
+         var oRouter = this.getOwnerComponent().getRouter();
+         //var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+         oRouter.navTo("login");
       }
    });
 });

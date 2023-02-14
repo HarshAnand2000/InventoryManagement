@@ -1,27 +1,42 @@
-<mvc:View
-	xmlns="sap.m"
-	xmlns:mvc="sap.ui.core.mvc">
-    
-	<Table items="{path:'/DT_PRODUCT'}" 
-    id="inventoryTable"
-    class="inventoryTable">
-		<columns>
-			<Column><Text text="Product ID" class="headColor"/></Column>
-			<Column demandPopin="true"><Text text="Product Category" class="headColor"/></Column>
-			<Column minScreenWidth="Tablet" demandPopin="true"><Text text="Product Type" class="headColor"/></Column>
-			<Column minScreenWidth="Tablet" demandPopin="true"><Text text="UOM" class="headColor"/></Column>
-            <Column minScreenWidth="Tablet" demandPopin="true"><Text text="Active Status" class="headColor"/></Column>
-		</columns>
+<mvc:View controllerName="sap.ui.inventory.controller.Table2" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc">
+    <Table items="{path:'/DT_PRODUCT'}" id="productTable" mode="SingleSelectLeft" class="inventoryTable">
+        <headerToolbar>
+            <Toolbar>
+                <Input id="searchField" placeholder="Select Product Catgeory" width="300px" name="searchCategory" class="sapUiLargeMarginBegin"/>
+                <Button id="fastMoving" text="Fast Moving" width="10%" type="Unstyled" class="sapUiSmallMargin fastMovingBtn" press=".onSearchInventoryTable" />
+                <Button icon="sap-icon://sort" press=".onSortButtonPressed" />
+                <Button icon="sap-icon://delete" press="onDelete"></Button>
+                <Button icon="sap-icon://refresh" press="onRefresh"></Button>
+            </Toolbar>
+        </headerToolbar>
+
+        <columns>
+            <Column>
+                <Text text="Product ID" class="headColor" />
+            </Column>
+            <Column demandPopin="true">
+                <Text text="Product Category" class="headColor" />
+            </Column>
+            <Column minScreenWidth="Tablet" demandPopin="true">
+                <Text text="Product Type" class="headColor" />
+            </Column>
+            <Column minScreenWidth="Tablet" demandPopin="true">
+                <Text text="UOM" class="headColor" />
+            </Column>
+            <Column minScreenWidth="Tablet" demandPopin="true">
+                <Text text="Active Status" class="headColor" />
+            </Column>
+        </columns>
         <items>
-			<ColumnListItem>
-				<cells>
-					<Text text="{prd_id}"/>
-					<Text text="{prd_cat}"/>
-					<Text text="{prd_type}"/>
-					<Text text="{uom}"/>
-					<Text text="{active}"/>
-				</cells>
-			</ColumnListItem>
-		</items>
-	</Table>
+            <ColumnListItem>
+                <cells>
+                    <Text text="{prd_id}" />
+                    <Text text="{prd_cat}" />
+                    <Text text="{prd_type}" />
+                    <Text text="{uom}" />
+                    <Text text="{active}" />
+                </cells>
+            </ColumnListItem>
+        </items>
+    </Table>
 </mvc:View>

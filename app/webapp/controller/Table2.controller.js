@@ -17,20 +17,20 @@ sap.ui.define([
 ) {
 	"use strict";
 
-	return BaseController.extend("sap.ui.inventory.controller.Table", {
+	return BaseController.extend("sap.ui.inventory.controller.Table2", {
 
 		onInit: function () {
-			this._oTable = this.byId("inventoryTable");
+			this._oTable = this.byId("productTable");
 			this._oVSD = null;
 			this._sSortField = null;
 			this._bSortDescending = false;
-			this._aValidSortFields = ["prd_id", "prd_cat", "prd_name"];
+			this._aValidSortFields = ["prd_id", "prd_cat"];
 			this._sSearchQuery = null;
 
 			this._initViewSettingsDialog();
 		},
 		onRefresh : function () {
-			var oBinding = this.byId("inventoryTable").getBinding("items");
+			var oBinding = this.byId("productTable").getBinding("items");
 			if (oBinding.hasPendingChanges()) {
 				MessageBox.error("refreshNotPossible");
 				return;
@@ -39,11 +39,12 @@ sap.ui.define([
 			MessageToast.show("Refreshed Successfully");
 		},
 		onDelete : function () {
-			var oSelected = this.byId("inventoryTable").getSelectedItem();
+			var oSelected = this.byId("productTable").getSelectedItem();
+			console.log(oSelected);
 			console.log(oSelected.getBindingContext());
 			if (oSelected) {
 				oSelected.getBindingContext().delete("$auto").then(function () {
-					MessageToast.show("Deleted Succesfully!!");
+					MessageToast.show("Deleted Successfully!!");
 				}.bind(this), function (oError) {
 					MessageBox.error(oError.message);
 				});
@@ -58,7 +59,7 @@ sap.ui.define([
 		},
 
 		_initViewSettingsDialog : function () {
-			this._oVSD = new ViewSettingsDialog("vsd", {
+			this._oVSD = new ViewSettingsDialog("vsd2", {
 				confirm: function (oEvent) {
 					var oSortItem = oEvent.getParameter("sortItem");
 					this._applySorter(oSortItem.getKey(), oEvent.getParameter("sortDescending"));
@@ -78,11 +79,6 @@ sap.ui.define([
 				selected: false
 			}));
 
-            this._oVSD.addSortItem(new ViewSettingsItem({
-				key: "prd_name",
-				text: "Product Name",
-				selected: false
-			}));
 		},
 
 		_applySearchFilter : function (sSearchQuery) {
@@ -93,7 +89,6 @@ sap.ui.define([
 			if (sSearchQuery && sSearchQuery.length > 0) {
                 aFilters.push(new Filter("prd_id", FilterOperator.Contains, sSearchQuery));
 				aFilters.push(new Filter("prd_cat", FilterOperator.Contains, sSearchQuery));
-				aFilters.push(new Filter("prd_name", FilterOperator.Contains, sSearchQuery));
 				oFilter = new Filter({ filters: aFilters, and: false });  // OR filter
 			} else {
 				oFilter = null;
@@ -143,7 +138,7 @@ sap.ui.define([
 		},
 
 		_syncViewSettingsDialogSorter : function (sSortField, bSortDescending) {
-			// the possible keys are: "Product ID" | "Product Category" | "Product Name"
+			// the possible keys are: "Product ID" | "Product Category"
 			// Note: no input validation is implemented here
 			this._oVSD.setSelectedSortItem(sSortField);
 			this._oVSD.setSortDescending(bSortDescending);

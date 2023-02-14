@@ -6,9 +6,7 @@ sap.ui.define([
             
 
             onSubmit: function (oEvent) {
-
-
-
+               
                 var prd_id = this.getView().byId('prd_id').getValue();
                 var prd_cat = this.getView().byId('prd_cat').getValue(); 
                 var prd_type = this.getView().byId('prd_typ').getValue();  
@@ -42,7 +40,12 @@ sap.ui.define([
                 var oRouter = this.getOwnerComponent().getRouter();
                 //var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
                 oRouter.navTo("home");
-             }
+             },
+             onLogOut: function (oEvent) {
+               var oRouter = this.getOwnerComponent().getRouter();
+               //var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+               oRouter.navTo("login");
+            }
              
          }); 
     });

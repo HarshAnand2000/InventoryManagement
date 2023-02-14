@@ -16,16 +16,21 @@
                                         <Button text="Add Product Inventory" width="auto" type="Unstyled" class="sapUiSmallMargin btn" press=".onAddProductInventory" />
                                         <Button text="Analytics Dashboard" width="auto" type="Unstyled" class="sapUiSmallMargin btn" press=".onAnalyticsDashboard" />
                                     </FlexBox>
-                                    <VBox alignItems="Center" justifyContent="Center" class="sapUiSmallMargin">
-                                        <core:Icon src="sap-icon://person-placeholder" class="iconSize" color="white" />
-                                        <Text text="{TempDataModel>/UserName}" class="icontext" />
-                                    </VBox>
+                                    <HBox justifyContent="Center" alignItems="Center" class="sapUiSmallMargin">
+                                        <MenuButton text="{TempDataModel>/UserName}" icon="sap-icon://person-placeholder" type="Success" class="profileButton">
+                                            <menu>
+                                                <Menu>
+                                                    <MenuItem text="LogOut" icon="sap-icon://log" press="onLogOut" />
+                                                </Menu>
+                                            </menu>
+                                        </MenuButton>
+                                    </HBox>
                                 </HBox>
                             </HBox>
                         </content>
                         <FlexBox class="title" alignItems="Center" justifyContent="SpaceBetween">
                             <Text text="Add Product Master" class="myCustomText sapUiSmallMargin" />
-                            <Button text="View Product Master" type="Unstyled" class="sapUiSmallMargin btn" press=".onViewProductMaster" />
+                            <Button text="View Product Master" type="Unstyled" icon="sap-icon://search" class="sapUiSmallMargin btn" press=".onViewProductMaster" />
                         </FlexBox>
                         <content>
                             <form:SimpleForm editable="true" width="800px" class="myLoginForm">
@@ -61,12 +66,12 @@
 
                                     <FlexBox width='480px' height="50px" alignItems="Center" justifyContent="SpaceBetween">
                                         <Label text="Unit of Measure" width="150px" design="Bold" />
-                                        <Input  id="uom" placeholder="Enter Unit of Measure" valueLiveUpdate="true" class="sapThemeBrand-asBackgroundColor place" width="400px" />
+                                        <Input id="uom" placeholder="Enter Unit of Measure" valueLiveUpdate="true" class="sapThemeBrand-asBackgroundColor place" width="400px" />
                                     </FlexBox>
 
                                     <FlexBox width='480px' height="50px" alignItems="Center" justifyContent="Start">
                                         <Label text="Active" width="150px" design="Bold" />
-                                         <Input id="active" placeholder="Enter Status" valueLiveUpdate="true" class="sapThemeBrand-asBackgroundColor place" width="400px" />
+                                        <Input id="active" placeholder="Enter Status" valueLiveUpdate="true" class="sapThemeBrand-asBackgroundColor place" width="400px" />
                                     </FlexBox>
 
                                     <FlexBox height="120px" alignItems="Center" justifyContent="Center">

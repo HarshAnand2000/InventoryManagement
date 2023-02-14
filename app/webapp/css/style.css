@@ -54,8 +54,7 @@ button {
 
 .title .btn {
     border-style: none;
-    border: 2px solid black;
-    height: 40px;
+    color:white;
     border-radius: 5px;
 }
 
@@ -169,4 +168,8 @@ input[name="searchCategory"]{
 
 .iconDownColor{
     color : red;
+}
+
+.dltButton{
+    margin-left: 500px;
 }
