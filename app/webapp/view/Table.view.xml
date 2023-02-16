@@ -1,6 +1,6 @@
 <mvc:View controllerName="sap.ui.inventory.controller.Table" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc">
     
-    <Table mode="SingleSelectLeft" items="{
+    <Table mode="MultiSelect" items="{
 		path:'/FT_INVENTORY',
 		sorter : {
             path : 'prd_id' 

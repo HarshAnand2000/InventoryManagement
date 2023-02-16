@@ -17,10 +17,15 @@
                                         <Button text="Add Product Inventory" width="auto" type="Unstyled" class="sapUiSmallMargin btn" press=".onAddProductInventory" />
                                         <Button text="Analytics Dashboard" width="auto" type="Unstyled" class="sapUiSmallMargin btn" press=".onAnalyticsDashboard" />
                                     </FlexBox>
-                                    <VBox alignItems="Center" justifyContent="Center" class="sapUiSmallMargin">
-                                        <core:Icon src="sap-icon://person-placeholder" class="iconSize" color="white" />
-                                        <Text text="Alice" class="icontext" />
-                                    </VBox>
+                                    <HBox justifyContent="Center" alignItems="Center" class="sapUiSmallMargin" >
+                                        <MenuButton text="{TempDataModel>/UserName}" icon="sap-icon://person-placeholder" type="Success" class="profileButton">
+                                            <menu>
+                                                <Menu>
+                                                    <MenuItem text="LogOut" icon="sap-icon://log" press="onLogOut" />
+                                                </Menu>
+                                            </menu>
+                                        </MenuButton>
+                                    </HBox>
                                 </HBox>
                             </HBox>
                         </content>

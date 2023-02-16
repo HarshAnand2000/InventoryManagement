@@ -38,16 +38,14 @@ sap.ui.define([
 			oBinding.refresh();
 			MessageToast.show("Refreshed Successfully");
 		},
-		onDelete : function () {
-			var oSelected = this.byId("productTable").getSelectedItem();
-			console.log(oSelected);
-			console.log(oSelected.getBindingContext());
+		onDelete: function () {
+			var oSelected = this.byId("productTable").getSelectedItems();
 			if (oSelected) {
-				oSelected.getBindingContext().delete("$auto").then(function () {
-					MessageToast.show("Deleted Successfully!!");
-				}.bind(this), function (oError) {
-					MessageBox.error(oError.message);
-				});
+				for (var i = 0; i < oSelected.length; i++) {
+					oSelected[i].getBindingContext().delete("$auto").then(function () {
+						MessageToast.show("Deleted Succesfully!!");
+					});
+				}
 			}
 		},
 		onSortButtonPressed : function () {

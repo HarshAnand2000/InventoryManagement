@@ -1,5 +1,5 @@
 <mvc:View controllerName="sap.ui.inventory.controller.Table2" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc">
-    <Table items="{path:'/DT_PRODUCT'}" id="productTable" mode="SingleSelectLeft" class="inventoryTable">
+    <Table items="{path:'/DT_PRODUCT'}" id="productTable" mode="MultiSelect" class="inventoryTable">
         <headerToolbar>
             <Toolbar>
                 <Input id="searchField" placeholder="Select Product Catgeory" width="300px" name="searchCategory" class="sapUiLargeMarginBegin"/>
