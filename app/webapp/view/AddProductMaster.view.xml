@@ -8,7 +8,7 @@
                             <HBox justifyContent="SpaceBetween" class="myNav" height="60px">
                                 <FlexBox justifyContent="Center" alignItems="Center" width="auto">
                                     <Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Wipro_Primary_Logo_Color_RGB.svg/440px-Wipro_Primary_Logo_Color_RGB.svg.png" width="50px" class="sapUiSmallMargin" />
-                                    <Text text="Inventory Management Solution" class="sapUiSmallMargin myCustomText" />
+                                    <Text text="Retail Inventory Management Solution" class="sapUiSmallMargin myCustomText" />
                                 </FlexBox>
                                 <HBox>
                                     <FlexBox alignItems="Center">
@@ -61,7 +61,7 @@
                                     <FlexBox width='480px' height="50px" alignItems="Center" justifyContent="SpaceBetween">
                                         <Label text="Created By" width="150px" design="Bold" />
 
-                                        <Input id="created_by" placeholder="Enter Created By" valueLiveUpdate="true" class="sapThemeBrand-asBackgroundColor place" width="400px" />
+                                        <Input id="created_by" placeholder="Enter Created By" value="{TempDataModel>/UserName}" class="sapThemeBrand-asBackgroundColor place" width="400px" />
                                     </FlexBox>
 
                                     <FlexBox width='480px' height="50px" alignItems="Center" justifyContent="SpaceBetween">

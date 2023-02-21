@@ -1,0 +1,37 @@
+<mvc:View controllerName="sap.ui.inventory.controller.SignUp" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:form="sap.ui.layout.form" xmlns:mvc="sap.ui.core.mvc">
+    <Shell>
+        <App class="myLogIn">
+            <pages>
+                <Page title="SIGN UP">
+                    <content>
+                        <Panel class="sapUiResponsiveMargin" width="auto">
+                            <FlexBox justifyContent="Center" alignItems="Center" width="auto">
+                                <Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Wipro_Primary_Logo_Color_RGB.svg/440px-Wipro_Primary_Logo_Color_RGB.svg.png" width="150px" />
+                                <FormattedText htmlText="Retail Inventory Management Solution" class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText" />
+                            </FlexBox>
+                            <form:SimpleForm editable="true" width="800px" class="myLoginForm">
+                                <VBox justifyContent="Center" alignItems="Center">
+                                    <FlexBox width="500px" height="80px" alignItems="Center" justifyContent="SpaceBetween">
+                                        <Label text="Username:" design="Bold" />
+                                        <Input id="user_input" placeholder="Enter your username" valueLiveUpdate="true" class="sapThemeBrand-asBackgroundColor place" width="400px" />
+                                    </FlexBox>
+                                    <FlexBox width="500px" height="80px" alignItems="Center" justifyContent="SpaceBetween">
+                                        <Label text="Password:" design="Bold" />
+                                        <Input type="Password" id="pass_input" placeholder="Enter your password" valueLiveUpdate="true" class="place" width="400px" showValueHelp="true" valueHelpIconSrc="sap-icon://show" valueHelpRequest="handleValueHelp" />
+                                    </FlexBox>
+
+                                    <VBox>
+                                        <FlexBox class="sapUiSmallMarginTop" alignItems="Center" justifyContent="Center">
+                                            <Link text="Already have an account?Log In" class="sapUiLargeMarginEnd" press="onLogInPress" />
+                                            <Button width="150px" type="Emphasized" text="Sign Up" class="sapUiSmallMarginEnd" press=".onSignUp" />
+                                        </FlexBox>
+                                    </VBox>
+                                </VBox>
+                            </form:SimpleForm>
+                        </Panel>
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>

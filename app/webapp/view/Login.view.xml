@@ -7,7 +7,7 @@
 <Shell>
     <App class="myLogIn">
         <pages>
-            <Page title="LOGIN">
+            <Page title="LOG IN">
                 <content>
                    <mvc:XMLView viewName="sap.ui.inventory.view.LogInPanel"/>
                 </content>

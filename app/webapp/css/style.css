@@ -102,7 +102,6 @@ input[type=text] {
     text-align: center;
 }
 
-
 input[type=password] {
     background-color: #4472C4;
     color: white;
@@ -154,6 +153,11 @@ input[name="searchCategory"]{
     color:black;
 }
 
+.sapMInputBaseIconContainer .sapUiIcon{
+    background-color:#4472C4;
+    color:white;
+}
+
 .fastMovingBtn{
     color:white;
     border: none;
@@ -172,4 +176,8 @@ input[name="searchCategory"]{
 
 .dltButton{
     margin-left: 500px;
+}
+
+.analyticsBtn{
+    background-color: #06B0F0;
 }

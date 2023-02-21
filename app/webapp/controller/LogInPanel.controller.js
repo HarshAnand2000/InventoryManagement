@@ -1,18 +1,25 @@
 sap.ui.define([
    "sap/ui/core/mvc/Controller",
-   "sap/m/MessageToast",
+   "sap/m/MessageToast"
 ], function (Controller, MessageToast) {
    "use strict";
    return Controller.extend("sap.ui.inventory.controller.LogInPanel", {
 
+
+      onSignUpPress: function(){
+         var oRouter = this.getOwnerComponent().getRouter();
+         oRouter.navTo("signup")
+      },
+
       onLogIn: function (oEvent) {
          var oModel = new sap.ui.model.odata.v4.ODataModel({ serviceUrl: "../../catalog/", synchronizationMode: "None" });
          var oContext = oModel.bindContext("/DT_USER");
-
          var username = this.getView().byId("user_input");
          var password = this.getView().byId("pass_input");
+         
          var oRouter = this.getOwnerComponent().getRouter();
-
+         
+        
          var uname = username.getValue();
          this.getView().getModel("TempDataModel").setProperty("/", { "UserName": uname });
 
@@ -23,7 +30,6 @@ sap.ui.define([
             while (i < size) {
                var user = result.value[i].username;
                var pass = result.value[i].password;
-               console.log(user, pass);
 
                if (username.getValue() === "") {
                   MessageToast.show("Please enter username", { at: "center top" }); return;
@@ -47,6 +53,16 @@ sap.ui.define([
             }
          });
          
+      },
+      handleValueHelp : function(){
+         var x = this.getView().byId("pass_input");
+         if (x.getProperty("type") == "Password") {
+           x.setProperty("type","Text");
+           x.setProperty("valueHelpIconSrc","sap-icon://hide");
+         } else {
+         x.setProperty("type","Password");
+         x.setProperty("valueHelpIconSrc","sap-icon://show");
+         }
       }
    });
 });

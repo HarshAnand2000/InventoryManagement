@@ -98,6 +98,11 @@
           "pattern": "viewproductmaster",
           "name": "viewproductmaster",
           "target": "viewproductmaster"
+        },
+        {
+          "pattern": "signup",
+          "name": "signup",
+          "target": "signup"
         }
       ],
       "targets": {
@@ -124,6 +129,10 @@
         "viewproductmaster": {
           "id": "viewproductmaster",
           "name": "ViewProductMaster"
+        },
+        "signup": {
+          "id": "signup",
+          "name": "SignUp"
         }
       }
     },

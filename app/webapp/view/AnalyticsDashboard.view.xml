@@ -17,7 +17,7 @@
                         <HBox justifyContent="SpaceBetween" class="myNav" height="60px">
                             <FlexBox justifyContent="Center" alignItems="Center" width="auto">
                                 <Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Wipro_Primary_Logo_Color_RGB.svg/440px-Wipro_Primary_Logo_Color_RGB.svg.png" width="50px" class="sapUiSmallMargin" />
-                                <FormattedText htmlText="Inventory Management Solution" class="sapUiSmallMargin myCustomText" />
+                                <FormattedText htmlText="Retail Inventory Management Solution" class="sapUiSmallMargin myCustomText" />
                             </FlexBox>
                             <HBox>
                                 <FlexBox alignItems="Center">
@@ -59,12 +59,14 @@
                                                     <VBox class="data sapUiSmallMargin" width="300px">
                                                         <Text text="YOY-Growth of Inventory" class=" sapUiSmallMargin trendingHeading" />
                                                         <FlexBox justifyContent="Center" alignItems="Center">
-                                                            <Text id="arrowText" text="+20%" class=" sapUiSmallMargin trendingText" />
+                                                            <Text id="arrowText" text="" class=" sapUiSmallMargin trendingText" />
                                                             <core:Icon id="arrowIcon" src="sap-icon://arrow-top" class="iconSize" />
                                                         </FlexBox>
                                                     </VBox>
                                                 </HBox>
                                             </VBox>
+                                            <Button text="Monthly Details" type="Unstyled" class=" sapUiSmallMarginEnd analyticsBtn" press="onMonthly"></Button>
+                                            <Button text="Yearly Details" type="Unstyled" class="analyticsBtn"></Button>
                                         </l:content>
                                     </l:BlockLayoutCell>
                                     <l:BlockLayoutCell id="Cell2" width="1">

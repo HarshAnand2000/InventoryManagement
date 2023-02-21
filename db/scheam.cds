@@ -32,6 +32,7 @@ entity FT_INVENTORY {
 }
 
 entity YearlyDetails {
+    year: String;
     month : String;
     detergent : String;
     soap : String;
