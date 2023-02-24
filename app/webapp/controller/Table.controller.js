@@ -42,8 +42,10 @@ sap.ui.define([
 		},
 		onDelete: function () {
 			var oSelected = this.byId("inventoryTable").getSelectedItems();
+			console.log(oSelected[i]);
 			if (oSelected) {
 				for (var i = 0; i < oSelected.length; i++) {
+					console.log(oSelected[i]);
 					oSelected[i].getBindingContext().delete("$auto").then(function () {
 						MessageToast.show("Deleted Succesfully!!");
 					});

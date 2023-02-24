@@ -3,8 +3,9 @@ sap.ui.define([
    "sap/m/Dialog",
    "sap/m/List",
    "sap/m/StandardListItem",
-   "sap/m/Button"
-], function (Controller, Dialog, List, StandardListItem, Button) {
+   "sap/m/Button",
+   'sap/ui/core/Fragment',
+], function (Controller, Dialog, List, StandardListItem, Button,Fragment) {
    "use strict";
 
    return Controller.extend("sap.ui.inventory.controller.Home", {
@@ -26,7 +27,7 @@ sap.ui.define([
                   maxProductSale = Number(result.value[i].prd_sale);
                   maxProductName = result.value[i].productname;
                }
-               mostSellingProduct.setText(maxProductName)
+               mostSellingProduct.setText(maxProductName);
             }
          });
 
@@ -44,6 +45,8 @@ sap.ui.define([
             }
             mostSellingCategory.setText(maxCategoryName);
          });
+
+          //YOY Growth 
          var arrowText = this.getView().byId("arrowText");
          var icon = this.getView().byId("arrowIcon");
          oContext2.requestObject().then(function (result) {
@@ -62,11 +65,12 @@ sap.ui.define([
             }
             console.log(year2021,year2022);
             var growth = ((year2022-year2021)/year2021)*100;
+            growth = growth.toString().slice(0,5);
             arrowText.setText(growth);
-            if(growth.toString().startsWith("")){
+            if(!growth.startsWith("-")){
                icon.addStyleClass("iconUpColor");
             }
-            if(growth.toString().startsWith("-")){
+            if(growth.startsWith("-")){
                console.log(growth);
                icon.addStyleClass("iconDownColor");
                icon.setProperty("src","sap-icon://arrow-bottom");
@@ -74,7 +78,7 @@ sap.ui.define([
             console.log(growth);
          });
 
-         //YOY Growth 
+        
          
       },
 
@@ -101,43 +105,7 @@ sap.ui.define([
          var oRouter = this.getOwnerComponent().getRouter();
          //var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
          oRouter.navTo("login");
-      },
-
-      onMonthly: function () {
-         if (!this.oResizableDialog) {
-            this.oResizableDialog = new Dialog({
-               title: "This Month Details",
-               contentWidth: "550px",
-               contentHeight: "300px",
-               resizable: true,
-               content: new List({
-                  items: {
-                     path: "/MonthlyDetails",
-                     template: new StandardListItem({
-                        title: "{productname}",
-                        counter: "{prd_sale}"
-                     }, {
-                        title: "{categoryname}",
-                        counter: "{prd_sale}"
-                     }
-
-                     )
-                  }
-               }),
-               endButton: new Button({
-                  text: "Close",
-                  press: function () {
-                     this.oResizableDialog.close();
-                  }.bind(this)
-               })
-            });
-
-            //to get access to the controller's model
-            this.getView().addDependent(this.oResizableDialog);
-         }
-
-         this.oResizableDialog.open();
-      },
+      }
 
    });
 });

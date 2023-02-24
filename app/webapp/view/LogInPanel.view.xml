@@ -17,7 +17,7 @@
                 <HBox>
                     <HBox width="500px" alignItems="Center" justifyContent="SpaceBetween">
                         <Link text="Don't have an account?Sign Up" class="sapUiLargeMarginEnd" press="onSignUpPress" />
-                        <Link text="Forgot Your Password" class="sapUiLargeMarginStart" press="handleLinkPress" />
+                        <Link text="Forgot Your Password" class="sapUiLargeMarginStart" press="onForgotPress" />
                     </HBox>
                 </HBox>
                 <VBox>

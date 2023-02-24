@@ -103,6 +103,11 @@
           "pattern": "signup",
           "name": "signup",
           "target": "signup"
+        },
+        {
+          "pattern": "forgotpassword",
+          "name": "forgotpassword",
+          "target": "forgotpassword"
         }
       ],
       "targets": {
@@ -133,6 +138,10 @@
         "signup": {
           "id": "signup",
           "name": "SignUp"
+        },
+        "forgotpassword": {
+          "id": "forgotpassword",
+          "name": "ForgotPassword"
         }
       }
     },

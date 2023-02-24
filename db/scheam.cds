@@ -17,11 +17,11 @@ entity DT_PRODUCT {
 }
 
 entity FT_INVENTORY {
-    prd_id   : String;
+    key prd_id   : String;
     prd_cat  : String;
     prd_name : String;
     prd_type : String;
-    key added_on : Timestamp;
+    added_on : Timestamp;
     added_by : String;
     qty      : String;
     stocks   : String;

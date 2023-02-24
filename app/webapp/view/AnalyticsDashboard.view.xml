@@ -65,8 +65,6 @@
                                                     </VBox>
                                                 </HBox>
                                             </VBox>
-                                            <Button text="Monthly Details" type="Unstyled" class=" sapUiSmallMarginEnd analyticsBtn" press="onMonthly"></Button>
-                                            <Button text="Yearly Details" type="Unstyled" class="analyticsBtn"></Button>
                                         </l:content>
                                     </l:BlockLayoutCell>
                                     <l:BlockLayoutCell id="Cell2" width="1">

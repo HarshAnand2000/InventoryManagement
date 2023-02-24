@@ -38,6 +38,8 @@ sap.ui.define([
                             var oListBinding = oModel.bindList("/FT_INVENTORY");
                             var oContext = oListBinding.create({ "prd_id": prd_id, "prd_cat": prd_cat, "prd_name": prd_name, "prd_type": prd_type, "added_on": added_on, "added_by": added_by, "qty": qty, "stocks": stocks, "st_unit": st_unit, "uom": uom, "exp_date": exp_date, "batch_no": batch_no });
 
+                            
+
                             found = 1;
                             break;
                         }
@@ -51,7 +53,7 @@ sap.ui.define([
                         MessageBox.success("Product Added Successfully! ");
                     }
                     if (found == 0) {
-                        MessageBox.error("Product Category does not exist in Product Master.", {
+                        MessageBox.error("Product Category does not exist in Product Master", {
                             actions: ["Manage Product Master", MessageBox.Action.CLOSE],
                             emphasizedAction: "Manage Product Master",
                             onClose: function (sAction) {

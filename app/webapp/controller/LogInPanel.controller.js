@@ -6,6 +6,14 @@ sap.ui.define([
    return Controller.extend("sap.ui.inventory.controller.LogInPanel", {
 
 
+      onInit : function(){
+       
+      },
+
+      onForgotPress: function(){
+         var oRouter = this.getOwnerComponent().getRouter();
+         oRouter.navTo("forgotpassword");
+      },
       onSignUpPress: function(){
          var oRouter = this.getOwnerComponent().getRouter();
          oRouter.navTo("signup")
@@ -13,17 +21,17 @@ sap.ui.define([
 
       onLogIn: function (oEvent) {
          var oModel = new sap.ui.model.odata.v4.ODataModel({ serviceUrl: "../../catalog/", synchronizationMode: "None" });
+        
          var oContext = oModel.bindContext("/DT_USER");
+         
          var username = this.getView().byId("user_input");
          var password = this.getView().byId("pass_input");
          
          var oRouter = this.getOwnerComponent().getRouter();
-         
-        
          var uname = username.getValue();
          this.getView().getModel("TempDataModel").setProperty("/", { "UserName": uname });
 
-
+        
          oContext.requestObject().then(function (result) {
             var size = result.value.length;
             var i = 0;
