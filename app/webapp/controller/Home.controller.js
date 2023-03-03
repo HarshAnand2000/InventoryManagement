@@ -6,6 +6,30 @@ sap.ui.define([
 
    return BaseController.extend("sap.ui.inventory.controller.Home", {
 
+      /////////////////for route authentication/////////////
+      onInit:function(){
+         var oRouter=sap.ui.core.UIComponent.getRouterFor(this);
+         oRouter.attachRouteMatched(this.checkAuthentication,this);
+      },
+
+      checkAuthentication : function(oEvent){
+         var sRouteName = oEvent.getParameter("name");
+        
+         if(sRouteName !== "" && sRouteName !=="signup" &&  sRouteName !=="forgotpassword"){
+            if(!this.isAuthenticated()){
+               var oRouter = this.getOwnerComponent().getRouter();
+               oRouter.navTo("login");
+               oEvent.preventDefault();
+            }
+         }
+      },
+
+      isAuthenticated:function(){
+         var oModel = this.getView().getModel("TempDataModel");
+         return oModel.getProperty("/authenticated");
+      },
+      /////////////////for route authentication/////////////
+
       onAddProductMaster: function (oEvent) {
          var oRouter = this.getOwnerComponent().getRouter();
          //var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
@@ -29,6 +53,8 @@ sap.ui.define([
       onLogOut: function (oEvent) {
          var oRouter = this.getOwnerComponent().getRouter();
          //var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+         var tempModel = this.getView().getModel("TempDataModel");
+         tempModel.setProperty("/authenticated",false);
          oRouter.navTo("login");
       }
    });

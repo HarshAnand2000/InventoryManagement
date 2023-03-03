@@ -6,6 +6,7 @@ sap.ui.define([
     "use strict";
     return Controller.extend("sap.ui.inventory.controller.SignUp", {
 
+
         onLiveChange: function () {
             clearTimeout(this._timer);
             this._timer = setTimeout(function () {
@@ -14,6 +15,8 @@ sap.ui.define([
 
         onSubmit: function () {
             var oModel = new sap.ui.model.odata.v4.ODataModel({ serviceUrl: "../../catalog/", synchronizationMode: "None" });
+
+
 
             var user = this.getView().byId("user_input").getValue();
             var pass = this.getView().byId("pass_input").getValue();

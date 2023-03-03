@@ -11,7 +11,7 @@
                                     <Text text="Retail Inventory Management Solution" class="sapUiSmallMargin myCustomText" />
                                 </FlexBox>
                                 <HBox>
-                                    <FlexBox alignItems="Center">
+                                    <FlexBox alignItems="Center" class="navButton">
                                         <Button text="Home" width="auto" type="Unstyled" class="sapUiSmallMargin btn" press=".onHome" />
                                         <Button text="Add Product Master" width="auto" type="Unstyled" class="sapUiSmallMargin btn" press=".onAddProductMaster" />
                                         <Button text="Add Product Inventory" width="auto" type="Unstyled" class="sapUiSmallMargin btn" press=".onAddProductInventory" />

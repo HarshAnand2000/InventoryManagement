@@ -19,6 +19,7 @@ sap.ui.define([
          oRouter.navTo("signup")
       },
 
+      //login button fuctionality
       onLogIn: function (oEvent) {
          var oModel = new sap.ui.model.odata.v4.ODataModel({ serviceUrl: "../../catalog/", synchronizationMode: "None" });
         
@@ -29,7 +30,8 @@ sap.ui.define([
          
          var oRouter = this.getOwnerComponent().getRouter();
          var uname = username.getValue();
-         this.getView().getModel("TempDataModel").setProperty("/", { "UserName": uname });
+         var tempModel = this.getView().getModel("TempDataModel");
+         tempModel.setProperty("/", { "UserName": uname });
 
         
          oContext.requestObject().then(function (result) {
@@ -47,6 +49,7 @@ sap.ui.define([
                }
                if (username.getValue() === user && password.getValue() === pass) {
                   MessageToast.show("Congratulations!!! You have successfully Logged in...", { at: "center top" });
+                  tempModel.setProperty("/authenticated",true);
                   oRouter.navTo("home");
                   username.setValue("");
                   password.setValue("");
@@ -62,6 +65,8 @@ sap.ui.define([
          });
          
       },
+
+      //eye button functionality
       handleValueHelp : function(){
          var x = this.getView().byId("pass_input");
          if (x.getProperty("type") == "Password") {

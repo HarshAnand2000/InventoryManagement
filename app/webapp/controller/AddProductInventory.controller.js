@@ -2,9 +2,29 @@ sap.ui.define([
     "sap/ui/core/mvc/Controller", "sap/m/MessageBox", "sap/m/MessageToast"], function (Controller, MessageBox, MessageToast) {
         "use strict"; return Controller.extend("sap.ui.inventory.controller.AddProductInventory", {
 
+            /////////////////for route authentication/////////////
             onInit: function () {
-
+                var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+                oRouter.attachRouteMatched(this.checkAuthentication, this);
             },
+
+            checkAuthentication: function (oEvent) {
+                var sRouteName = oEvent.getParameter("name");
+
+                if (sRouteName !== "" && sRouteName !== "signup" && sRouteName !== "forgotpassword") {
+                    if (!this.isAuthenticated()) {
+                        var oRouter = this.getOwnerComponent().getRouter();
+                        oRouter.navTo("login");
+                        oEvent.preventDefault();
+                    }
+                }
+            },
+
+            isAuthenticated: function () {
+                var oModel = this.getView().getModel("TempDataModel");
+                return oModel.getProperty("/authenticated");
+            },
+            /////////////////for route authentication/////////////
 
             onSubmit: function (oEvent) {
 
@@ -37,8 +57,6 @@ sap.ui.define([
                             var oModel = new sap.ui.model.odata.v4.ODataModel({ serviceUrl: "../../catalog/", synchronizationMode: "None" });
                             var oListBinding = oModel.bindList("/FT_INVENTORY");
                             var oContext = oListBinding.create({ "prd_id": prd_id, "prd_cat": prd_cat, "prd_name": prd_name, "prd_type": prd_type, "added_on": added_on, "added_by": added_by, "qty": qty, "stocks": stocks, "st_unit": st_unit, "uom": uom, "exp_date": exp_date, "batch_no": batch_no });
-
-                            
 
                             found = 1;
                             break;
@@ -84,6 +102,8 @@ sap.ui.define([
                 oRouter.navTo("home");
             },
             onLogOut: function (oEvent) {
+                var tempModel = this.getView().getModel("TempDataModel");
+                tempModel.setProperty("/authenticated",false);
                 var oRouter = this.getOwnerComponent().getRouter();
                 //var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
                 oRouter.navTo("login");

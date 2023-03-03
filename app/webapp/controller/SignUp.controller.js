@@ -25,6 +25,7 @@ sap.ui.define([
             var oContext = oListBinding.create({ "username": username.getValue(), "password": password.getValue() });
 
             MessageToast.show("Signed Up Successfully!");
+            //resettinng the value after signiun up
             username.setValue("");
             password.setValue("");
             var oRouter = this.getOwnerComponent().getRouter();

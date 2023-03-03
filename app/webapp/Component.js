@@ -12,7 +12,10 @@ sap.ui.define([
          
         // call the init function of the parent
         UIComponent.prototype.init.apply(this, arguments);
-        this.setModel(new sap.ui.model.json.JSONModel() , "TempDataModel");
+
+        //setting global JSON model
+        this.setModel(new sap.ui.model.json.JSONModel({authenticated: false}) , "TempDataModel");
+
         // create the views based on the url/hash
 		  this.getRouter().initialize();
      }

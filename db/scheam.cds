@@ -21,7 +21,7 @@ entity FT_INVENTORY {
     prd_cat  : String;
     prd_name : String;
     prd_type : String;
-    added_on : Timestamp;
+    added_on : String;
     added_by : String;
     qty      : String;
     stocks   : String;
@@ -41,7 +41,7 @@ entity YearlyDetails {
 }
 
 entity MonthlyDetails{
-    category : String;
+    key category : String;
     productname : String;
     cat_sale : String;
     prd_sale : String;

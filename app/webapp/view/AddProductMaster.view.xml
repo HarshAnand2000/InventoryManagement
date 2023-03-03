@@ -11,7 +11,7 @@
                                     <Text text="Retail Inventory Management Solution" class="sapUiSmallMargin myCustomText" />
                                 </FlexBox>
                                 <HBox>
-                                    <FlexBox alignItems="Center">
+                                    <FlexBox alignItems="Center" class="navButton">
                                         <Button text="Home" width="auto" type="Unstyled" class="sapUiSmallMargin btn" press=".onHome" />
                                         <Button text="Add Product Inventory" width="auto" type="Unstyled" class="sapUiSmallMargin btn" press=".onAddProductInventory" />
                                         <Button text="Analytics Dashboard" width="auto" type="Unstyled" class="sapUiSmallMargin btn" press=".onAnalyticsDashboard" />
@@ -54,8 +54,7 @@
 
                                     <FlexBox width='480px' height="50px" alignItems="Center" justifyContent="SpaceBetween">
                                         <Label text="Created On" width="150px" design="Bold" />
-
-                                        <Input id="created_on" placeholder="Enter Created On" valueLiveUpdate="true" class="sapThemeBrand-asBackgroundColor place" width="400px" />
+                                        <DateTimePicker id="created_on" placeholder="Enter Created On" change="handleChange" class="sapThemeBrand-asBackgroundColor place" width="400px" />
                                     </FlexBox>
 
                                     <FlexBox width='480px' height="50px" alignItems="Center" justifyContent="SpaceBetween">

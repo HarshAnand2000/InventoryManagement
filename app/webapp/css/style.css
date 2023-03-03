@@ -156,6 +156,7 @@ input[name="searchCategory"]{
 .sapMInputBaseIconContainer .sapUiIcon{
     background-color:#4472C4;
     color:white;
+   
 }
 
 .fastMovingBtn{
@@ -180,4 +181,10 @@ input[name="searchCategory"]{
 
 .analyticsBtn{
     background-color: #06B0F0;
+}
+
+.navButton button:hover {
+    background-color:  #50C878; 
+    color:white;
+    border-color: #00308F;
 }
